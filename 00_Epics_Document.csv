@@ -48,3 +48,19 @@ Danh sách User Stories trực thuộc (1 Stories):
 - [US-13] Trải nghiệm quy trình mua hàng thương mại điện tử End-to-End hoàn chỉnh (Priority: High)
 
 Trách nhiệm kiểm thử: QA - Khổng Đức Anh (Độ bao phủ yêu cầu 100%)",High,QA - Khổng Đức Anh,01-Anh Khổng,To Do
+EPIC-07,Epic,[EPIC-07] Backend Services & Database Data Integrity,"Mục tiêu nghiệp vụ & Phạm vi:
+Kiểm thử các giao thức hợp đồng giao tiếp RESTful API và tính toàn vẹn của cơ sở dữ liệu quan hệ (Database/SQL) mô phỏng trong hệ sinh thái thương mại điện tử.
+
+Danh sách User Stories trực thuộc (2 Stories):
+- [US-14] Xác thực hợp đồng và phản hồi giao diện lập trình ứng dụng RESTful API (Priority: Medium)
+- [US-15] Đảm bảo tính nhất quán, toàn vẹn dữ liệu và giao dịch trong cơ sở dữ liệu quan hệ (Priority: Medium)
+
+Trách nhiệm kiểm thử: QA - Khổng Đức Anh (Độ bao phủ yêu cầu 100%)",Medium,QA - Khổng Đức Anh,01-Anh Khổng,To Do
+EPIC-08,Epic,[EPIC-08] Non-Functional Quality Attributes & Security Standards,"Mục tiêu nghiệp vụ & Phạm vi:
+Đánh giá các tiêu chuẩn chất lượng phi chức năng bao gồm: Bảo mật phiên & đầu vào, Hiệu năng đáp ứng (SLA), Trải nghiệm người dùng (Usability), Khả năng tiếp cận (Accessibility - WCAG 2.1) và Tương thích đa thiết bị/đa trình duyệt.
+
+Danh sách User Stories trực thuộc (2 Stories):
+- [US-16] Bảo mật thông tin phiên làm việc và chống tiêm mã độc hại (XSS/Session Security) (Priority: High)
+- [US-17] Tối ưu hiệu năng, khả năng tiếp cận, trải nghiệm người dùng và tương thích đa nền tảng (Priority: Medium)
+
+Trách nhiệm kiểm thử: QA - Khổng Đức Anh (Độ bao phủ yêu cầu 100%)",Medium,QA - Khổng Đức Anh,01-Anh Khổng,To Do

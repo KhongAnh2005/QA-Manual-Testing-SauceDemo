@@ -97,10 +97,11 @@ Kế hoạch kiểm thử này đóng vai trò là kim chỉ nam chiến lược
 
 <a id="tp-section-4-3"></a>
 ### 4.3 Test Types (Các loại hình kiểm thử)
-- **Smoke Testing:** Bộ kiểm thử kiểm tra nhanh các chức năng cốt lõi (Đăng nhập, Thêm giỏ hàng, Thanh toán cơ bản).
-- **Functional Testing:** Kiểm thử chi tiết từng chức năng nghiệp vụ theo AC.
-- **Negative Testing:** Kiểm thử các tình huống dữ liệu sai, vi phạm quy tắc để đảm bảo hệ thống phản hồi lỗi an toàn và thân thiện.
-- **UI/UX Testing:** Kiểm tra tính nhất quán của giao diện, hình ảnh hiển thị, căn chỉnh và phản hồi của các nút bấm.
+- **Functional Testing:** Kiểm thử chi tiết từng chức năng nghiệp vụ, phân vùng tương đương (EP), phân tích giá trị biên (BVA) và kiểm tra xác thực form theo Acceptance Criteria.
+- **Defect Detection & Edge Cases Testing:** Kiểm thử bẫy lỗi và các kịch bản bất thường cố tình trên SauceDemo thông qua 4 User Personas (`problem_user`, `error_user`, `visual_user`, `performance_glitch_user`) và các lỗi logic nghiệp vụ (checkout giỏ hàng rỗng, lệch đồng bộ React State).
+- **API Testing:** Kiểm thử tích hợp các endpoint REST API (Authentication, Products, Cart, Checkout) theo chuẩn đặc tả Swagger/OpenAPI. *(Trạng thái thực thi ở Phase 2: `Blocked` do hệ thống là ứng dụng Single Page App client-side mô phỏng, chưa expose public REST API endpoints; Test Cases được thiết kế sẵn sàng cho môi trường backend)*.
+- **Database / SQL Testing:** Kiểm thử truy vấn CSDL xác minh tính toàn vẹn dữ liệu, mật khẩu băm, ràng buộc khóa ngoại và quan hệ bảng. *(Trạng thái thực thi ở Phase 2: `Blocked` do chính sách bảo mật máy chủ demo không cung cấp quyền direct connection; Test Cases được thiết kế sẵn với các câu lệnh SQL chuẩn)*.
+- **Non-Functional Testing:** Bao gồm Kiểm thử hiệu năng (Performance Response Time SLA < 2.0s), An toàn bảo mật (Security XSS & Cookie Flags), Khả năng tiếp cận (Accessibility WCAG 2.1 Tab Navigation) và Độ tương thích đa thiết bị (Mobile Responsive Viewport).
 
 ---
 
@@ -113,8 +114,9 @@ Kế hoạch kiểm thử này đóng vai trò là kim chỉ nam chiến lược
 | **Trình Duyệt Chính** | Google Chrome Desktop (Phiên bản mới nhất v124+) |
 | **Trình Duyệt Phụ** | Apple Safari (macOS), Mozilla Firefox |
 | **Hệ Điều Hành** | macOS Sonoma / Windows 11 |
-| **Độ Phân Giải Chuẩn** | Full HD (1920x1080) và Responsive Tablet/Mobile Viewport |
+| **Độ Phân Giải Chuẩn** | Full HD (1920x1080) và Responsive Tablet/Mobile Viewport (375x812, 414x896) |
 | **Công Cụ Quản Lý** | Jira Kanban Board & Zephyr Scale / Squad |
+| **Công Cụ API & SQL** | Postman / Newman CLI, DBeaver Database Client |
 
 ---
 
@@ -127,11 +129,11 @@ Kế hoạch kiểm thử này đóng vai trò là kim chỉ nam chiến lược
 - Môi trường kiểm thử `https://www.saucedemo.com/` hoạt động ổn định, có thể truy cập được.
 
 ### 6.2 Exit Criteria (Tiêu chí kết thúc kiểm thử)
-- 100% Test Cases theo kế hoạch đã được thực thi và ghi nhận kết quả.
-- Tỷ lệ Pass đạt tối thiểu **95%** đối với các Test Cases chức năng thông thường.
-- **0 lỗi nghiêm trọng (Blocker/Critical)** còn tồn đọng chưa được giải quyết hoặc chưa có giải pháp thay thế.
-- Toàn bộ Bug phát hiện được mô tả chi tiết, phân loại Severity/Priority và có bằng chứng (Screenshots/Logs) đầy đủ.
-- Báo cáo tổng kết kiểm thử (Test Summary Report) được hoàn thiện và ký duyệt.
+- 100% Test Cases theo kế hoạch đã được phân loại và thiết lập trạng thái thực thi rõ ràng.
+- Tỷ lệ Pass đạt tối thiểu **95%** đối với các Test Cases chức năng thông thường (Happy Path).
+- Toàn bộ Bug phát hiện từ các ca kiểm thử bẫy lỗi (Defect Detection) được lập Bug Reports chi tiết, phân loại Severity/Priority và có bằng chứng (Screenshots/Logs) đầy đủ trên Jira.
+- Các ca kiểm thử API và Database SQL được ghi nhận trạng thái `Blocked` kèm lý do kỹ thuật và bằng chứng môi trường minh bạch.
+- Báo cáo tổng kết kiểm thử (Test Summary Report - TSR) được hoàn thiện và ký duyệt.
 
 ---
 
@@ -163,17 +165,17 @@ Kế hoạch kiểm thử này đóng vai trò là kim chỉ nam chiến lược
 <a id="tp-section-9"></a>
 ## 9. Test Deliverables
 
-1. **Epics/ Folder:** 6 Epics độc lập định dạng Markdown và CSV sẵn sàng nhập vào Jira.
-2. **00_Epics_Document.md & .csv:** Bảng đặc tả tổng hợp 6 Epics và hướng dẫn import Jira.
-3. **Requirements/ Folder:** 13 User Stories độc lập phân chia theo từng thư mục Epic.
-4. **01_Requirement_Document_User_Stories.md & .csv:** Bảng đặc tả tổng hợp 13 User Stories và AC.
+1. **Epics/ Folder:** 8 Epics độc lập định dạng Markdown và CSV sẵn sàng nhập vào Jira.
+2. **00_Epics_Document.md & .csv:** Bảng đặc tả tổng hợp 8 Epics và hướng dẫn import Jira.
+3. **Requirements/ Folder:** 17 User Stories độc lập phân chia theo từng thư mục Epic.
+4. **01_Requirement_Document_User_Stories.md & .csv:** Bảng đặc tả tổng hợp 17 User Stories và AC.
 5. **02_Test_Plan_Document.md:** Kế hoạch kiểm thử tổng thể chuẩn quốc tế.
-6. **Test_Scenarios/ Folder:** 30 Test Scenarios độc lập phân chia theo từng thư mục Epic.
-7. **03_Test_Scenarios_Document.md & .csv:** Danh sách tổng hợp 30 Test Scenarios phân loại Happy Path & Negative Path.
-8. **Test_Cases/ Folder:** 42 Test Cases độc lập theo cấu trúc thư viện Zephyr.
-9. **04_Test_Cases_Document.md & .csv:** Bộ 42 Test Cases chi tiết theo chuẩn Zephyr và QA Portfolio.
+6. **Test_Scenarios/ Folder:** 34 Test Scenarios độc lập phân chia theo từng thư mục Epic.
+7. **03_Test_Scenarios_Document.md & .csv:** Danh sách tổng hợp 34 Test Scenarios phân loại Happy Path & Negative Path.
+8. **Test_Cases/ Folder:** 71 Test Cases độc lập theo cấu trúc thư viện Zephyr (13 thư mục phân cấp).
+9. **04_Test_Cases_Document.md & .csv:** Bộ 71 Test Cases chi tiết (50 Functional, 5 API, 5 Database SQL, 11 Non-Functional) theo chuẩn Zephyr và QA Portfolio.
 10. **05_Exploratory_Test_Plan.md:** Kế hoạch kiểm thử thăm dò gồm 6 Charters và chiến lược Heuristics.
-11. **06_Requirement_Traceability_Matrix_RTM.md & .csv:** Ma trận truy xuất nguồn gốc hai chiều đạt 100% độ bao phủ.
+11. **06_Requirement_Traceability_Matrix_RTM.md & .csv:** Ma trận truy xuất nguồn gốc hai chiều đạt 100% độ bao phủ (Zero Coverage Gap).
 
 ---
 

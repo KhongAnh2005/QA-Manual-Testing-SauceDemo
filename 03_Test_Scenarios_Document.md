@@ -3,7 +3,7 @@
 **Target Application:** SauceDemo ([https://www.saucedemo.com/](https://www.saucedemo.com/))  
 **Methodology:** Deconstructing Requirements into Scenarios (Happy Path & Negative Path, Risk Matrix)  
 **Author / Owner:** QA - Khổng Đức Anh  
-**Total Scenarios:** 30 Scenarios  
+**Total Scenarios:** 34 Scenarios  
 **Status:** Approved (Baseline for Test Case Design)  
 
 ---
@@ -19,13 +19,15 @@
   - [EPIC-04: Checkout Workflow](#ts-epic-04)
   - [EPIC-05: Sidebar Navigation & App State](#ts-epic-05)
   - [EPIC-06: End-to-End E-Commerce Workflow](#ts-epic-06)
+  - [EPIC-07: Backend Services & Database Data Integrity](#ts-epic-07)
+  - [EPIC-08: Non-Functional Quality Attributes & Security Standards](#ts-epic-08)
 
 ---
 
 <a id="ts-section-1"></a>
 ## 1. Overview & Scenario Design Strategy
 
-Tài liệu Test Scenarios phân tích và bẻ gãy 13 User Stories từ Requirement Document thành 30 kịch bản kiểm thử độc lập.
+Tài liệu Test Scenarios phân tích và bẻ gãy 17 User Stories từ Requirement Document thành 34 kịch bản kiểm thử độc lập.
 Mỗi User Story đều được phân tích thành cả **Happy Path** (luồng chuẩn lý tưởng) và **Negative Path** (luồng ngoại lệ, kiểm tra tính phục hồi và bảo mật), đồng thời được đánh giá mức độ rủi ro nghiệp vụ (**Business Risk Matrix**) dựa trên Tác động nghiệp vụ (Business Impact) và Khả năng xảy ra (Likelihood).
 Cột **UserStoryID** liên kết rõ ràng đến từng tiêu chí nghiệm thu tương ứng (ví dụ: `US-01_AC1, US-01_AC2`) giúp việc truy xuất trở nên thuận tiện và trực quan.
 
@@ -64,6 +66,10 @@ Cột **UserStoryID** liên kết rõ ràng đến từng tiêu chí nghiệm th
 | **TS-28** | EPIC-06 | US-13_AC1, US-13_AC2 | Kiểm tra toàn diện quy trình mua sắm End-to-End với nhiều sản phẩm | Happy Path | High |
 | **TS-29** | EPIC-06 | US-13_AC1, US-13_AC2 | Kiểm tra luồng mua sắm kết hợp sắp xếp giá và xóa bớt sản phẩm trong giỏ | Happy Path | High |
 | **TS-30** | EPIC-06 | US-13_AC1, US-13_AC3 | Kiểm tra tính an toàn dữ liệu khi đặt lại trạng thái ứng dụng giữa chừng thanh toán | Negative Path | Medium |
+| **TS-31** | EPIC-07 | US-14_AC1, US-14_AC2, US-14_AC3 | Kiểm thử các giao thức hợp đồng và xử lý phản hồi mã lỗi RESTful API | Contract / Integration Path | High |
+| **TS-32** | EPIC-07 | US-15_AC1, US-15_AC2, US-15_AC3 | Kiểm thử tính toàn vẹn dữ liệu và giao dịch ACID trong cơ sở dữ liệu quan hệ (SQL) | Database / Data Integrity Path | High |
+| **TS-33** | EPIC-08 | US-16_AC1, US-16_AC2, US-16_AC3 | Kiểm thử bảo mật phiên làm việc và phòng chống tấn công tiêm mã (Security & XSS) | Security / Defensive Path | High |
+| **TS-34** | EPIC-08 | US-17_AC1, US-17_AC2, US-17_AC3 | Kiểm thử các thuộc tính phi chức năng: Hiệu năng SLA, Tiếp cận WCAG, Usability và Tương thích | Non-Functional Quality Path | Medium |
 
 ---
 
@@ -607,6 +613,84 @@ Thử nghiệm kích hoạt 'Reset App State' khi đang ở màn hình thanh to�
 
 ##### Expected Outcome
 Ghi nhận cách ứng dụng xử lý khi giỏ hàng bị xóa trong lúc đơn hàng đang chờ xác nhận thanh toán.
+
+---
+
+<a id="ts-epic-07"></a>
+### EPIC-07: Backend Services & Database Data Integrity
+
+#### [TS-31] Kiểm thử các giao thức hợp đồng và xử lý phản hồi mã lỗi RESTful API
+
+| **Field** | **Value** |
+|:---|:---|
+| **Scenario ID** | TS-31 |
+| **Epic** | EPIC-07 - Backend Services & Database Data Integrity |
+| **UserStoryID** | US-14_AC1, US-14_AC2, US-14_AC3 |
+| **Path Type** | Contract / Integration Path |
+| **Risk Priority** | High (Mức độ nghiêm trọng cao, Khả năng xảy ra trung bình) |
+| **Preconditions** | Môi trường giả lập API Backend hoặc tài liệu Swagger/OpenAPI được cung cấp. |
+
+##### Objective
+Kiểm tra cấu trúc và tính hợp lệ của các endpoint RESTful API cốt lõi (Đăng nhập, Danh mục sản phẩm, Giỏ hàng, Đặt hàng) qua phương thức HTTP POST/GET và mã trạng thái chuẩn.
+
+##### Expected Outcome
+Các API trả về đúng HTTP status (200, 201, 401, 423) cùng payload JSON phản hồi đúng định dạng schema.
+
+#### [TS-32] Kiểm thử tính toàn vẹn dữ liệu và giao dịch ACID trong cơ sở dữ liệu quan hệ (SQL)
+
+| **Field** | **Value** |
+|:---|:---|
+| **Scenario ID** | TS-32 |
+| **Epic** | EPIC-07 - Backend Services & Database Data Integrity |
+| **UserStoryID** | US-15_AC1, US-15_AC2, US-15_AC3 |
+| **Path Type** | Database / Data Integrity Path |
+| **Risk Priority** | High (Mức độ nghiêm trọng cao, Khả năng xảy ra trung bình) |
+| **Preconditions** | Có quyền kết nối và truy vấn vào máy chủ cơ sở dữ liệu (PostgreSQL/MySQL). |
+
+##### Objective
+Thực thi truy vấn SQL để xác minh tính nhất quán dữ liệu người dùng, tính chính xác của giá sản phẩm và tính toàn vẹn khóa ngoại trong giao dịch đặt hàng.
+
+##### Expected Outcome
+Mật khẩu được băm an toàn, dữ liệu giá khớp giao diện, các giao dịch đơn hàng commit đầy đủ theo tính chất ACID.
+
+---
+
+<a id="ts-epic-08"></a>
+### EPIC-08: Non-Functional Quality Attributes & Security Standards
+
+#### [TS-33] Kiểm thử bảo mật phiên làm việc và phòng chống tấn công tiêm mã (Security & XSS)
+
+| **Field** | **Value** |
+|:---|:---|
+| **Scenario ID** | TS-33 |
+| **Epic** | EPIC-08 - Non-Functional Quality Attributes & Security Standards |
+| **UserStoryID** | US-16_AC1, US-16_AC2, US-16_AC3 |
+| **Path Type** | Security / Defensive Path |
+| **Risk Priority** | High (Mức độ nghiêm trọng rất cao, Khả năng xảy ra thấp) |
+| **Preconditions** | Người dùng ở trang đăng nhập hoặc các biểu mẫu nhập thông tin thanh toán. |
+
+##### Objective
+Xác minh các biện pháp bảo vệ chống tấn công XSS qua form nhập liệu, cờ bảo mật cookie phiên và cơ chế ngăn chặn xem lại trang bảo mật sau khi đăng xuất.
+
+##### Expected Outcome
+Script độc hại bị mã hóa an toàn, cookie được bảo vệ, và không thể truy cập lại trang nội bộ bằng nút Back sau khi logout.
+
+#### [TS-34] Kiểm thử các thuộc tính phi chức năng: Hiệu năng SLA, Tiếp cận WCAG, Usability và Tương thích
+
+| **Field** | **Value** |
+|:---|:---|
+| **Scenario ID** | TS-34 |
+| **Epic** | EPIC-08 - Non-Functional Quality Attributes & Security Standards |
+| **UserStoryID** | US-17_AC1, US-17_AC2, US-17_AC3 |
+| **Path Type** | Non-Functional Quality Path |
+| **Risk Priority** | Medium (Mức độ nghiêm trọng trung bình, Khả năng xảy ra cao) |
+| **Preconditions** | Trình duyệt được thiết lập DevTools (Performance, Lighthouse) và các viewport thử nghiệm. |
+
+##### Objective
+Đo lường thời gian tải trang theo SLA, kiểm tra hỗ trợ bàn phím/aria-label theo WCAG 2.1 AA, tính nhất quán UX và độ co giãn trên màn hình di động.
+
+##### Expected Outcome
+Trang đạt SLA tải dưới 2s cho người dùng bình thường, điều hướng bàn phím rõ nét, và giao diện hiển thị chuẩn xác trên mobile.
 
 ---
 

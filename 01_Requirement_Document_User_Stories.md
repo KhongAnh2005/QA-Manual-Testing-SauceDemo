@@ -18,6 +18,8 @@
   - [EPIC-04: Checkout Workflow](#req-epic-04)
   - [EPIC-05: Sidebar Navigation & App State](#req-epic-05)
   - [EPIC-06: End-to-End E-Commerce Workflow](#req-epic-06)
+  - [EPIC-07: Backend Services & Database Data Integrity](#req-epic-07)
+  - [EPIC-08: Non-Functional Quality Attributes & Security Standards](#req-epic-08)
 - [4. User Personas & Test Accounts](#req-section-4)
 
 ---
@@ -38,6 +40,8 @@ Trong mô hình phát triển phần mềm Agile/Scrum thực tế tại doanh n
 | **EPIC-04** | Checkout Workflow | Quy trình thanh toán 3 bước: Xác thực thông tin khách hàng (Step 1), Tổng quan đơn hàng & tính toán tiền/thuế (Step 2), và Xác nhận hoàn tất đơn hàng (Step 3). |
 | **EPIC-05** | Sidebar Navigation & App State | Menu trượt điều hướng (All Items, liên kết About, Logout, Reset App State) và chức năng làm mới trạng thái ứng dụng. |
 | **EPIC-06** | End-to-End E-Commerce Workflow | Luồng trải nghiệm mua sắm tích hợp xuyên suốt từ đăng nhập, sắp xếp, chọn sản phẩm, giỏ hàng, thanh toán đến hoàn tất đơn hàng và đăng xuất. |
+| **EPIC-07** | Backend Services & Database Data Integrity | Kiểm thử các giao thức hợp đồng giao tiếp RESTful API và tính toàn vẹn của cơ sở dữ liệu quan hệ (Database/SQL) mô phỏng trong hệ sinh thái thương mại điện tử. |
+| **EPIC-08** | Non-Functional Quality Attributes & Security Standards | Đánh giá các tiêu chuẩn chất lượng phi chức năng bao gồm: Bảo mật phiên & đầu vào, Hiệu năng đáp ứng (SLA), Trải nghiệm người dùng (Usability), Khả năng tiếp cận (Accessibility - WCAG 2.1) và Tương thích đa thiết bị/đa trình duyệt. |
 
 ---
 
@@ -356,6 +360,100 @@ Trong mô hình phát triển phần mềm Agile/Scrum thực tế tại doanh n
 - **AC1:** Hoàn thành luồng mua hàng: Đăng nhập -> Lọc sản phẩm -> Thêm nhiều sản phẩm -> Xem giỏ hàng -> Nhập thông tin Bước 1 -> Xác thực tổng tiền Bước 2 -> Nhấn Hoàn tất Bước 3 -> Quay về trang chủ.
 - **AC2:** Dữ liệu sản phẩm, số lượng, tiền hàng và thuế đồng bộ chính xác qua mọi bước mà không phát sinh lỗi hệ thống.
 - **AC3:** Giỏ hàng được giải phóng sạch sau khi thanh toán và người dùng có thể đăng xuất an toàn.
+
+---
+
+<a id="req-epic-07"></a>
+### EPIC-07: Backend Services & Database Data Integrity
+
+#### [US-14] Xác thực hợp đồng và phản hồi giao diện lập trình ứng dụng RESTful API
+
+| **Field** | **Value** |
+|:---|:---|
+| **UserStoryID** | US-14 |
+| **Epic** | EPIC-07 - Backend Services & Database Data Integrity |
+| **Priority** | Medium |
+| **Role** | Kỹ sư kiểm thử backend / Lập trình viên tích hợp |
+
+##### User Story Statement
+
+- **As a:** Kỹ sư kiểm thử backend / Lập trình viên tích hợp
+- **I want:** kiểm tra các điểm cuối REST API (Authentication, Inventory, Cart, Order) phản hồi đúng mã trạng thái HTTP và cấu trúc JSON chuẩn
+- **So that:** đảm bảo tính ổn định, tin cậy và khả năng tích hợp của hệ thống dịch vụ backend
+
+##### Acceptance Criteria
+
+- **AC1:** Endpoint POST /api/v1/auth/login trả về HTTP 200 OK kèm Bearer Token khi thông tin hợp lệ; trả về HTTP 401 Unauthorized khi sai mật khẩu; trả về HTTP 423 Locked khi tài khoản bị khóa.
+- **AC2:** Endpoint GET /api/v1/products trả về HTTP 200 OK với mảng 6 sản phẩm đúng schema (id, name, price, image_url).
+- **AC3:** Endpoint POST /api/v1/cart/items và POST /api/v1/checkout/orders xử lý thêm sản phẩm và tạo đơn hàng với HTTP 201 Created cùng mã đơn hàng duy nhất.
+
+#### [US-15] Đảm bảo tính nhất quán, toàn vẹn dữ liệu và giao dịch trong cơ sở dữ liệu quan hệ
+
+| **Field** | **Value** |
+|:---|:---|
+| **UserStoryID** | US-15 |
+| **Epic** | EPIC-07 - Backend Services & Database Data Integrity |
+| **Priority** | Medium |
+| **Role** | Quản trị viên dữ liệu / QA Database Tester |
+
+##### User Story Statement
+
+- **As a:** Quản trị viên dữ liệu / QA Database Tester
+- **I want:** truy vấn và xác minh dữ liệu trong các bảng users, products, orders và order_items tuân thủ các ràng buộc khóa chính, khóa ngoại và tính chất ACID
+- **So that:** dữ liệu kinh doanh và tài chính của người dùng không bị sai lệch, mất mát hoặc trùng lặp
+
+##### Acceptance Criteria
+
+- **AC1:** Bảng 'users' lưu trữ mật khẩu dưới dạng băm an toàn (BCrypt/Argon2); cờ 'is_locked' được phản ánh chính xác với tài khoản bị khóa.
+- **AC2:** Dữ liệu đơn giá và tên sản phẩm trong bảng 'products' khớp 100% với giao diện hiển thị.
+- **AC3:** Giao dịch tạo đơn hàng tuân thủ thuộc tính ACID: Bản ghi bảng 'orders' và các dòng chi tiết trong 'order_items' được commit đồng thời, có ràng buộc Foreign Key toàn vẹn.
+
+---
+
+<a id="req-epic-08"></a>
+### EPIC-08: Non-Functional Quality Attributes & Security Standards
+
+#### [US-16] Bảo mật thông tin phiên làm việc và chống tiêm mã độc hại (XSS/Session Security)
+
+| **Field** | **Value** |
+|:---|:---|
+| **UserStoryID** | US-16 |
+| **Epic** | EPIC-08 - Non-Functional Quality Attributes & Security Standards |
+| **Priority** | High |
+| **Role** | Chuyên viên kiểm thử bảo mật (Security Tester) |
+
+##### User Story Statement
+
+- **As a:** Chuyên viên kiểm thử bảo mật (Security Tester)
+- **I want:** hệ thống bảo vệ cookie phiên và làm sạch các dữ liệu đầu vào người dùng
+- **So that:** ngăn ngừa rủi ro đánh cắp phiên và tấn công tiêm mã Cross-Site Scripting (XSS)
+
+##### Acceptance Criteria
+
+- **AC1:** Cookie phiên 'session-username' và các cookie nhạy cảm phải được gắn cờ Secure, HttpOnly và SameSite=Strict.
+- **AC2:** Các trường nhập liệu (Username, First Name, Last Name, Postal Code) phải làm sạch hoặc mã hóa ký tự HTML/Script nguy hiểm (<script>, img onerror), không kích hoạt mã độc hại.
+- **AC3:** Sau khi đăng xuất, các trang nhạy cảm phía sau đăng nhập (/inventory.html, /cart.html) không thể được khôi phục hoặc xem lại thông qua bộ nhớ đệm lịch sử trình duyệt (Browser Cache / History Back).
+
+#### [US-17] Tối ưu hiệu năng, khả năng tiếp cận, trải nghiệm người dùng và tương thích đa nền tảng
+
+| **Field** | **Value** |
+|:---|:---|
+| **UserStoryID** | US-17 |
+| **Epic** | EPIC-08 - Non-Functional Quality Attributes & Security Standards |
+| **Priority** | Medium |
+| **Role** | Khách hàng truy cập đa thiết bị và người dùng có nhu cầu trợ năng |
+
+##### User Story Statement
+
+- **As a:** Khách hàng truy cập đa thiết bị và người dùng có nhu cầu trợ năng
+- **I want:** ứng dụng tải nhanh dưới 2 giây, giao diện hiển thị chuẩn xác trên mobile/desktop, tương phản màu tốt và hỗ trợ điều hướng bàn phím
+- **So that:** tôi có thể mua sắm thuận tiện trên mọi thiết bị và điều kiện sử dụng
+
+##### Acceptance Criteria
+
+- **AC1:** Thời gian tải trang (Page Load Time / DOMContentLoaded) dưới điều kiện mạng thông thường phải nhỏ hơn hoặc bằng 2.0 giây đối với tài khoản tiêu chuẩn.
+- **AC2:** Ứng dụng hỗ trợ điều hướng hoàn toàn bằng phím Tab (Focus ring rõ nét) và các nút thao tác icon có thuộc tính aria-label / title theo chuẩn WCAG 2.1 AA.
+- **AC3:** Giao diện hiển thị phản hồi mượt mà, không bị vỡ layout, lệch hàng cột hoặc tràn nội dung trên các kích thước màn hình di động (Viewport 375x812) và các trình duyệt Chrome, Firefox, Safari.
 
 ---
 
