@@ -1,0 +1,50 @@
+Work Item ID,Issue Type,Summary,Description,Priority,Assignee,Reporter,Status
+EPIC-01,Epic,[EPIC-01] Authentication & Session Management,"Mục tiêu nghiệp vụ & Phạm vi:
+Quản lý xác thực người dùng, đăng nhập, xử lý tài khoản bị khóa, đăng xuất và kiểm soát quyền truy cập phiên làm việc.
+
+Danh sách User Stories trực thuộc (3 Stories):
+- [US-01] Đăng nhập thành công với thông tin tài khoản hợp lệ (Priority: High)
+- [US-02] Xử lý lỗi khi đăng nhập không hợp lệ hoặc tài khoản bị khóa (Priority: High)
+- [US-03] Đăng xuất tài khoản an toàn và hủy phiên làm việc (Priority: High)
+
+Trách nhiệm kiểm thử: QA - Khổng Đức Anh (Độ bao phủ yêu cầu 100%)",High,QA - Khổng Đức Anh,01-Anh Khổng,To Do
+EPIC-02,Epic,[EPIC-02] Product Catalog & Inventory Browsing,"Mục tiêu nghiệp vụ & Phạm vi:
+Hiển thị danh mục sản phẩm, hình ảnh, thông tin mô tả, xem trang chi tiết sản phẩm và các bộ lọc sắp xếp hàng hóa.
+
+Danh sách User Stories trực thuộc (2 Stories):
+- [US-04] Hiển thị danh mục sản phẩm và xem chi tiết sản phẩm (Priority: High)
+- [US-05] Sắp xếp danh mục sản phẩm theo tên và giá tiền (Priority: Medium)
+
+Trách nhiệm kiểm thử: QA - Khổng Đức Anh (Độ bao phủ yêu cầu 100%)",High,QA - Khổng Đức Anh,01-Anh Khổng,To Do
+EPIC-03,Epic,[EPIC-03] Shopping Cart Management,"Mục tiêu nghiệp vụ & Phạm vi:
+Thêm/xóa sản phẩm khỏi giỏ hàng, đồng bộ huy hiệu số lượng (Badge Counter), trang xem giỏ hàng và duy trì trạng thái dữ liệu.
+
+Danh sách User Stories trực thuộc (3 Stories):
+- [US-06] Thêm sản phẩm vào giỏ hàng và cập nhật số lượng (Priority: High)
+- [US-07] Xóa sản phẩm khỏi giỏ hàng (Priority: High)
+- [US-08] Xem giỏ hàng và duy trì trạng thái dữ liệu khi chuyển trang (Priority: High)
+
+Trách nhiệm kiểm thử: QA - Khổng Đức Anh (Độ bao phủ yêu cầu 100%)",High,QA - Khổng Đức Anh,01-Anh Khổng,To Do
+EPIC-04,Epic,[EPIC-04] Checkout Workflow,"Mục tiêu nghiệp vụ & Phạm vi:
+Quy trình thanh toán 3 bước: Xác thực thông tin khách hàng (Step 1), Tổng quan đơn hàng & tính toán tiền/thuế (Step 2), và Xác nhận hoàn tất đơn hàng (Step 3).
+
+Danh sách User Stories trực thuộc (3 Stories):
+- [US-09] Thanh toán Bước 1 - Kiểm tra và xác thực thông tin khách hàng (Priority: High)
+- [US-10] Thanh toán Bước 2 - Xem tổng quan đơn hàng và kiểm tra tính toán tiền, thuế (Priority: High)
+- [US-11] Thanh toán Bước 3 - Xác nhận đơn hàng thành công và làm mới giỏ hàng (Priority: High)
+
+Trách nhiệm kiểm thử: QA - Khổng Đức Anh (Độ bao phủ yêu cầu 100%)",High,QA - Khổng Đức Anh,01-Anh Khổng,To Do
+EPIC-05,Epic,[EPIC-05] Sidebar Navigation & App State,"Mục tiêu nghiệp vụ & Phạm vi:
+Menu trượt điều hướng (All Items, liên kết About, Logout, Reset App State) và chức năng làm mới trạng thái ứng dụng.
+
+Danh sách User Stories trực thuộc (1 Stories):
+- [US-12] Sử dụng menu điều hướng Sidebar và khôi phục trạng thái ứng dụng (Priority: Medium)
+
+Trách nhiệm kiểm thử: QA - Khổng Đức Anh (Độ bao phủ yêu cầu 100%)",Medium,QA - Khổng Đức Anh,01-Anh Khổng,To Do
+EPIC-06,Epic,[EPIC-06] End-to-End E-Commerce Workflow,"Mục tiêu nghiệp vụ & Phạm vi:
+Luồng trải nghiệm mua sắm tích hợp xuyên suốt từ đăng nhập, sắp xếp, chọn sản phẩm, giỏ hàng, thanh toán đến hoàn tất đơn hàng và đăng xuất.
+
+Danh sách User Stories trực thuộc (1 Stories):
+- [US-13] Trải nghiệm quy trình mua hàng thương mại điện tử End-to-End hoàn chỉnh (Priority: High)
+
+Trách nhiệm kiểm thử: QA - Khổng Đức Anh (Độ bao phủ yêu cầu 100%)",High,QA - Khổng Đức Anh,01-Anh Khổng,To Do
