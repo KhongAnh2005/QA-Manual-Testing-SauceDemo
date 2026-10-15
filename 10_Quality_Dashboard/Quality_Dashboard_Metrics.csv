@@ -1,0 +1,11 @@
+Feature Area,Total Tests,Passed,Failed,Blocked,Pass Rate (%),Defects,Defect Density,Risk Level
+Authentication & Login,9,9,0,0,100.0%,0,0.00,Low
+Product Catalog & Details,9,7,2,0,77.8%,2,0.22,Medium
+Shopping Cart Management,11,9,2,0,81.8%,2,0.18,Medium
+Checkout & Order Placement,15,13,2,0,86.7%,2,0.13,High
+Sidebar Navigation & State,5,4,1,0,80.0%,1,0.20,Medium
+End-to-End Core Journey,1,1,0,0,100.0%,0,0.00,Low
+Non-Functional Quality,11,8,3,0,72.7%,3,0.27,High
+Backend API Testing,5,0,0,5,N/A,0,0.00,Blocked
+Database SQL Testing,5,0,0,5,N/A,0,0.00,Blocked
+TOTAL,71,51,10,10,71.8%,10,0.14,High (Critical Defect)

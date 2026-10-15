@@ -1,0 +1,72 @@
+Epic ID,User Story ID,User Story Name,Test Scenario ID,Test Case ID,Test Type,Coverage Status
+EPIC-01,"US-01_AC1, US-01_AC2, US-01_AC3",Kiểm tra đăng nhập thành công với tài khoản tiêu chuẩn hợp lệ,TS-01,TC-01,Functional / Smoke,Covered
+EPIC-01,"US-02_AC1, US-02_AC2",Kiểm tra thông báo lỗi khi để trống thông tin đăng nhập,TS-02,TC-02,Negative / Validation,Covered
+EPIC-01,"US-02_AC1, US-02_AC2",Kiểm tra thông báo lỗi khi để trống thông tin đăng nhập,TS-02,TC-03,Negative / Validation,Covered
+EPIC-01,"US-02_AC1, US-02_AC2",Kiểm tra thông báo lỗi khi để trống thông tin đăng nhập,TS-02,TC-04,Negative / Validation,Covered
+EPIC-01,"US-02_AC1, US-02_AC2",Kiểm tra thông báo lỗi khi để trống thông tin đăng nhập,TS-02,TC-07,Functional / UI Interaction,Covered
+EPIC-01,US-02_AC3,Kiểm tra từ chối đăng nhập khi nhập sai tài khoản hoặc mật khẩu,TS-03,TC-05,Negative / Security,Covered
+EPIC-01,US-02_AC4,Kiểm tra chặn đăng nhập đối với tài khoản đã bị khóa,TS-04,TC-06,Negative / Security,Covered
+EPIC-01,"US-03_AC1, US-03_AC2",Kiểm tra đăng xuất an toàn và chặn truy cập trực tiếp URL nội bộ,TS-05,TC-08,Functional / Security,Covered
+EPIC-01,"US-03_AC1, US-03_AC2",Kiểm tra đăng xuất an toàn và chặn truy cập trực tiếp URL nội bộ,TS-05,TC-09,Security / Authorization,Covered
+EPIC-02,US-04_AC1,Kiểm tra hiển thị đầy đủ danh mục 6 sản phẩm và thông tin giá cả,TS-06,TC-10,Functional / UI Verification,Covered
+EPIC-02,US-04_AC1,Kiểm tra hiển thị đầy đủ danh mục 6 sản phẩm và thông tin giá cả,TS-06,TC-17,UI / Asset Integrity / Defect Detection,Covered
+EPIC-02,"US-04_AC2, US-04_AC3, US-04_AC4",Kiểm tra xem trang chi tiết sản phẩm và chức năng quay lại danh mục,TS-07,TC-11,Functional / Navigation,Covered
+EPIC-02,"US-04_AC2, US-04_AC3, US-04_AC4",Kiểm tra xem trang chi tiết sản phẩm và chức năng quay lại danh mục,TS-07,TC-12,Functional / Navigation,Covered
+EPIC-02,"US-05_AC1, US-05_AC2",Kiểm tra sắp xếp danh mục sản phẩm theo bảng chữ cái (A-Z và Z-A),TS-08,TC-13,Functional / Sorting,Covered
+EPIC-02,"US-05_AC1, US-05_AC2",Kiểm tra sắp xếp danh mục sản phẩm theo bảng chữ cái (A-Z và Z-A),TS-08,TC-14,Functional / Sorting,Covered
+EPIC-02,"US-05_AC1, US-05_AC2",Kiểm tra sắp xếp danh mục sản phẩm theo bảng chữ cái (A-Z và Z-A),TS-08,TC-18,Error Handling / UI Exception / Defect Detection,Covered
+EPIC-02,"US-05_AC3, US-05_AC4",Kiểm tra sắp xếp danh mục sản phẩm theo giá số học (thấp đến cao và cao đến thấp),TS-09,TC-15,Functional / Business Logic,Covered
+EPIC-02,"US-05_AC3, US-05_AC4",Kiểm tra sắp xếp danh mục sản phẩm theo giá số học (thấp đến cao và cao đến thấp),TS-09,TC-16,Functional / Business Logic,Covered
+EPIC-02,US-04_AC1,Kiểm tra độ ổn định giao diện danh mục đối với tài khoản lỗi (problem_user),TS-10,TC-19,Functional / State Update,Covered
+EPIC-02,US-04_AC1,Kiểm tra độ ổn định giao diện danh mục đối với tài khoản lỗi (problem_user),TS-10,TC-20,Functional / Boundary,Covered
+EPIC-03,"US-06_AC1, US-06_AC2",Kiểm tra thêm sản phẩm vào giỏ hàng và tăng số lượng trên huy hiệu giỏ,TS-11,TC-21,Functional / State Update,Covered
+EPIC-03,"US-07_AC1, US-07_AC3",Kiểm tra xóa sản phẩm khỏi giỏ hàng ngay tại trang danh mục,TS-12,TC-22,Functional / State Update,Covered
+EPIC-03,"US-07_AC1, US-07_AC3",Kiểm tra xóa sản phẩm khỏi giỏ hàng ngay tại trang danh mục,TS-12,TC-23,Functional / State Update,Covered
+EPIC-03,"US-07_AC1, US-07_AC3",Kiểm tra xóa sản phẩm khỏi giỏ hàng ngay tại trang danh mục,TS-12,TC-28,Functional / Negative / Defect Detection,Covered
+EPIC-03,US-08_AC1,"Kiểm tra trang giỏ hàng hiển thị đúng danh sách, số lượng và giá sản phẩm",TS-13,TC-24,Functional / UI Verification,Covered
+EPIC-03,"US-07_AC2, US-07_AC3",Kiểm tra xóa sản phẩm trực tiếp từ bên trong trang giỏ hàng,TS-14,TC-25,Functional / List Update,Covered
+EPIC-03,US-08_AC3,Kiểm tra tính bền vững của giỏ hàng khi tải lại trang hoặc điều hướng,TS-15,TC-26,Functional / Navigation,Covered
+EPIC-04,US-09_AC1,Kiểm tra chuyển từ giỏ hàng sang trang thanh toán Bước 1,TS-16,TC-27,Functional / State Persistence,Covered
+EPIC-04,"US-09_AC2, US-09_AC3, US-09_AC4",Kiểm tra bắt buộc nhập thông tin khách hàng tại Bước 1 khi để trống trường,TS-17,TC-29,Functional / Negative / Business Logic / Defect Detection,Covered
+EPIC-04,US-09_AC5,Kiểm tra xử lý các định dạng mã bưu điện đặc biệt tại Bước 1,TS-18,TC-30,Functional / Navigation,Covered
+EPIC-04,US-09_AC6,Kiểm tra nút Cancel tại Bước 1 quay lại giỏ hàng an toàn,TS-19,TC-31,Functional / Form Submission,Covered
+EPIC-04,US-09_AC6,Kiểm tra nút Cancel tại Bước 1 quay lại giỏ hàng an toàn,TS-19,TC-35,Functional / Boundary,Covered
+EPIC-04,US-09_AC6,Kiểm tra nút Cancel tại Bước 1 quay lại giỏ hàng an toàn,TS-19,TC-43,Functional / Form Validation / Defect Detection,Covered
+EPIC-04,"US-10_AC1, US-10_AC2, US-10_AC3, US-10_AC4","Kiểm tra tính toán chính xác tiền hàng, thuế 8% và tổng tiền tại Bước 2",TS-20,TC-32,Negative / Form Validation,Covered
+EPIC-04,"US-10_AC1, US-10_AC2, US-10_AC3, US-10_AC4","Kiểm tra tính toán chính xác tiền hàng, thuế 8% và tổng tiền tại Bước 2",TS-20,TC-33,Negative / Form Validation,Covered
+EPIC-04,"US-10_AC1, US-10_AC2, US-10_AC3, US-10_AC4","Kiểm tra tính toán chính xác tiền hàng, thuế 8% và tổng tiền tại Bước 2",TS-20,TC-34,Negative / Form Validation,Covered
+EPIC-04,US-10_AC5,Kiểm tra nút Cancel tại Bước 2 hủy thanh toán và về trang danh mục,TS-21,TC-36,Functional / Navigation,Covered
+EPIC-04,"US-11_AC1, US-11_AC2, US-11_AC3","Kiểm tra hoàn tất đơn hàng Bước 3, hiển thị biên lai và làm sạch giỏ",TS-22,TC-37,Functional / UI Verification,Covered
+EPIC-04,"US-11_AC1, US-11_AC2, US-11_AC3","Kiểm tra hoàn tất đơn hàng Bước 3, hiển thị biên lai và làm sạch giỏ",TS-22,TC-38,Functional / UI Verification,Covered
+EPIC-04,US-09_AC1,Kiểm tra hành vi hệ thống khi tiến hành thanh toán với giỏ hàng rỗng,TS-23,TC-39,Functional / Calculation & Boundary,Covered
+EPIC-05,"US-12_AC1, US-12_AC5",Kiểm tra mở và đóng menu Sidebar dạng trượt,TS-24,TC-40,Functional / Navigation,Covered
+EPIC-05,"US-12_AC1, US-12_AC5",Kiểm tra mở và đóng menu Sidebar dạng trượt,TS-24,TC-44,Functional / Transaction Integrity / Defect Detection,Covered
+EPIC-05,US-12_AC2,Kiểm tra liên kết 'All Items' trong sidebar chuyển về trang sản phẩm,TS-25,TC-41,Functional / Transaction,Covered
+EPIC-05,US-12_AC3,Kiểm tra liên kết 'About' trong sidebar mở website Sauce Labs,TS-26,TC-42,Functional / Navigation,Covered
+EPIC-05,US-12_AC4,Kiểm tra chức năng 'Reset App State' đặt lại trạng thái ứng dụng,TS-27,TC-45,Functional / UI Animation,Covered
+EPIC-05,US-12_AC4,Kiểm tra chức năng 'Reset App State' đặt lại trạng thái ứng dụng,TS-27,TC-46,Functional / Navigation,Covered
+EPIC-05,US-12_AC4,Kiểm tra chức năng 'Reset App State' đặt lại trạng thái ứng dụng,TS-27,TC-47,Functional / External Link,Covered
+EPIC-05,US-12_AC4,Kiểm tra chức năng 'Reset App State' đặt lại trạng thái ứng dụng,TS-27,TC-48,Functional / State Reset,Covered
+EPIC-05,US-12_AC4,Kiểm tra chức năng 'Reset App State' đặt lại trạng thái ứng dụng,TS-27,TC-49,Navigation / Broken Link / Defect Detection,Covered
+EPIC-06,"US-13_AC1, US-13_AC2",Kiểm tra toàn diện quy trình mua sắm End-to-End với nhiều sản phẩm,TS-28,TC-50,Functional / End-to-End System Integration,Covered
+EPIC-07,"US-14_AC1, US-14_AC2, US-14_AC3",Kiểm thử các giao thức hợp đồng và xử lý phản hồi mã lỗi RESTful API,TS-31,TC-51,API / Integration Testing,Covered
+EPIC-07,"US-14_AC1, US-14_AC2, US-14_AC3",Kiểm thử các giao thức hợp đồng và xử lý phản hồi mã lỗi RESTful API,TS-31,TC-52,API / Negative Testing,Covered
+EPIC-07,"US-14_AC1, US-14_AC2, US-14_AC3",Kiểm thử các giao thức hợp đồng và xử lý phản hồi mã lỗi RESTful API,TS-31,TC-53,API / Schema Validation,Covered
+EPIC-07,"US-14_AC1, US-14_AC2, US-14_AC3",Kiểm thử các giao thức hợp đồng và xử lý phản hồi mã lỗi RESTful API,TS-31,TC-54,API / Functional Testing,Covered
+EPIC-07,"US-14_AC1, US-14_AC2, US-14_AC3",Kiểm thử các giao thức hợp đồng và xử lý phản hồi mã lỗi RESTful API,TS-31,TC-55,API / Transaction & Calculation,Covered
+EPIC-07,"US-15_AC1, US-15_AC2, US-15_AC3",Kiểm thử tính toàn vẹn dữ liệu và giao dịch ACID trong cơ sở dữ liệu quan hệ (SQL),TS-32,TC-56,Database / Security Verification,Covered
+EPIC-07,"US-15_AC1, US-15_AC2, US-15_AC3",Kiểm thử tính toàn vẹn dữ liệu và giao dịch ACID trong cơ sở dữ liệu quan hệ (SQL),TS-32,TC-57,Database / Data Consistency,Covered
+EPIC-07,"US-15_AC1, US-15_AC2, US-15_AC3",Kiểm thử tính toàn vẹn dữ liệu và giao dịch ACID trong cơ sở dữ liệu quan hệ (SQL),TS-32,TC-58,Database / Data Consistency,Covered
+EPIC-07,"US-15_AC1, US-15_AC2, US-15_AC3",Kiểm thử tính toàn vẹn dữ liệu và giao dịch ACID trong cơ sở dữ liệu quan hệ (SQL),TS-32,TC-59,Database / Transaction Verification,Covered
+EPIC-07,"US-15_AC1, US-15_AC2, US-15_AC3",Kiểm thử tính toàn vẹn dữ liệu và giao dịch ACID trong cơ sở dữ liệu quan hệ (SQL),TS-32,TC-60,Database / Relational Integrity,Covered
+EPIC-08,"US-16_AC1, US-16_AC2, US-16_AC3",Kiểm thử bảo mật phiên làm việc và phòng chống tấn công tiêm mã (Security & XSS),TS-33,TC-63,Security Testing,Covered
+EPIC-08,"US-16_AC1, US-16_AC2, US-16_AC3",Kiểm thử bảo mật phiên làm việc và phòng chống tấn công tiêm mã (Security & XSS),TS-33,TC-64,Security Testing,Covered
+EPIC-08,"US-16_AC1, US-16_AC2, US-16_AC3",Kiểm thử bảo mật phiên làm việc và phòng chống tấn công tiêm mã (Security & XSS),TS-33,TC-65,Security / Session Management,Covered
+EPIC-08,"US-17_AC1, US-17_AC2, US-17_AC3","Kiểm thử các thuộc tính phi chức năng: Hiệu năng SLA, Tiếp cận WCAG, Usability và Tương thích",TS-34,TC-61,Performance Testing,Covered
+EPIC-08,"US-17_AC1, US-17_AC2, US-17_AC3","Kiểm thử các thuộc tính phi chức năng: Hiệu năng SLA, Tiếp cận WCAG, Usability và Tương thích",TS-34,TC-62,Performance SLA / Response Time / Defect Detection,Covered
+EPIC-08,"US-17_AC1, US-17_AC2, US-17_AC3","Kiểm thử các thuộc tính phi chức năng: Hiệu năng SLA, Tiếp cận WCAG, Usability và Tương thích",TS-34,TC-66,Accessibility Testing,Covered
+EPIC-08,"US-17_AC1, US-17_AC2, US-17_AC3","Kiểm thử các thuộc tính phi chức năng: Hiệu năng SLA, Tiếp cận WCAG, Usability và Tương thích",TS-34,TC-67,Accessibility Testing,Covered
+EPIC-08,"US-17_AC1, US-17_AC2, US-17_AC3","Kiểm thử các thuộc tính phi chức năng: Hiệu năng SLA, Tiếp cận WCAG, Usability và Tương thích",TS-34,TC-68,Usability Testing,Covered
+EPIC-08,"US-17_AC1, US-17_AC2, US-17_AC3","Kiểm thử các thuộc tính phi chức năng: Hiệu năng SLA, Tiếp cận WCAG, Usability và Tương thích",TS-34,TC-69,Visual Regression / UI Layout / Defect Detection,Covered
+EPIC-08,"US-17_AC1, US-17_AC2, US-17_AC3","Kiểm thử các thuộc tính phi chức năng: Hiệu năng SLA, Tiếp cận WCAG, Usability và Tương thích",TS-34,TC-70,Compatibility / Responsive Testing,Covered
+EPIC-08,"US-17_AC1, US-17_AC2, US-17_AC3","Kiểm thử các thuộc tính phi chức năng: Hiệu năng SLA, Tiếp cận WCAG, Usability và Tương thích",TS-34,TC-71,Compatibility / Cross-Browser,Covered
