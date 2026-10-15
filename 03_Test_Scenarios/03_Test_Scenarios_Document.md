@@ -29,7 +29,7 @@ Total Scenarios: 34 Test Scenarios
 | [TS-07](#ts-07) | Kiểm tra xem trang chi tiết sản phẩm và chức năng quay lại danh mục | [US-04_AC2, US-04_AC3, US-04_AC4](../01_Requirements/01_Requirement_Document_User_Stories.md#us-04) | [EPIC-02](../00_Epics/EPIC-02.md) | Happy Path | Medium |
 | [TS-08](#ts-08) | Kiểm tra sắp xếp danh mục sản phẩm theo bảng chữ cái (A-Z và Z-A) | [US-05_AC1, US-05_AC2](../01_Requirements/01_Requirement_Document_User_Stories.md#us-05) | [EPIC-02](../00_Epics/EPIC-02.md) | Happy Path | Medium |
 | [TS-09](#ts-09) | Kiểm tra sắp xếp danh mục sản phẩm theo giá số học (thấp đến cao và cao đến thấp) | [US-05_AC3, US-05_AC4](../01_Requirements/01_Requirement_Document_User_Stories.md#us-05) | [EPIC-02](../00_Epics/EPIC-02.md) | Happy Path | Medium |
-| [TS-10](#ts-10) | Kiểm tra độ ổn định giao diện danh mục đối với tài khoản lỗi (problem_user) | [US-04_AC1](../01_Requirements/01_Requirement_Document_User_Stories.md#us-04) | [EPIC-02](../00_Epics/EPIC-02.md) | Negative Path | Medium |
+| [TS-10](#ts-10) | Kiểm tra tính toàn vẹn hình ảnh và độ ổn định giao diện danh mục sản phẩm | [US-04_AC1](../01_Requirements/01_Requirement_Document_User_Stories.md#us-04) | [EPIC-02](../00_Epics/EPIC-02.md) | Negative Path | Medium |
 | [TS-11](#ts-11) | Kiểm tra thêm sản phẩm vào giỏ hàng và tăng số lượng trên huy hiệu giỏ | [US-06_AC1, US-06_AC2](../01_Requirements/01_Requirement_Document_User_Stories.md#us-06) | [EPIC-03](../00_Epics/EPIC-03.md) | Happy Path | High |
 | [TS-12](#ts-12) | Kiểm tra xóa sản phẩm khỏi giỏ hàng ngay tại trang danh mục | [US-07_AC1, US-07_AC3](../01_Requirements/01_Requirement_Document_User_Stories.md#us-07) | [EPIC-03](../00_Epics/EPIC-03.md) | Happy Path | High |
 | [TS-13](#ts-13) | Kiểm tra trang giỏ hàng hiển thị đúng danh sách, số lượng và giá sản phẩm | [US-08_AC1](../01_Requirements/01_Requirement_Document_User_Stories.md#us-08) | [EPIC-03](../00_Epics/EPIC-03.md) | Happy Path | High |
@@ -287,7 +287,7 @@ Xem chi tiết: [TS-09.md](EPIC_02_Product_Catalog/TS-09.md)
 
 <a id="ts-10"></a>
 
-## Test Scenario: TS-10 - Kiểm tra độ ổn định giao diện danh mục đối với tài khoản lỗi (problem_user)
+## Test Scenario: TS-10 - Kiểm tra tính toàn vẹn hình ảnh và độ ổn định giao diện danh mục sản phẩm
 
 | **Field** | **Value** |
 |:---|:---|
@@ -299,10 +299,10 @@ Xem chi tiết: [TS-09.md](EPIC_02_Product_Catalog/TS-09.md)
 | **Preconditions** | Đăng nhập bằng tài khoản 'problem_user'. |
 
 ### 1. Objective
-Khảo sát và ghi nhận các lỗi hiển thị hình ảnh sản phẩm khi đăng nhập bằng tài khoản giả lập lỗi của Sauce Labs.
+Xác minh các phần tử hình ảnh trên danh mục sản phẩm hiển thị đầy đủ, đồng nhất và không có hình ảnh bị vỡ hoặc trỏ sai đường dẫn tài nguyên.
 
 ### 2. Expected Outcome
-Ghi nhận hiện tượng hỏng ảnh sản phẩm (ảnh bị thay thế hàng loạt bởi hình ảnh con chó) để lập báo cáo lỗi.
+Hình ảnh của tất cả sản phẩm hiển thị rõ nét, đúng tỷ lệ và đúng tài nguyên tương ứng với từng mặt hàng.
 
 
 Xem chi tiết: [TS-10.md](EPIC_02_Product_Catalog/TS-10.md)

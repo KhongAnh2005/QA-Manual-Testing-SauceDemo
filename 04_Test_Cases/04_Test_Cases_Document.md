@@ -25,7 +25,7 @@ Total Test Cases: 71 Ca kiểm thử
 | [TC-03](#tc-03) | Kiểm tra thông báo lỗi khi nhập Username nhưng để trống Password | Functional_Testing/Authentication | High | Medium | [US-02](../01_Requirements/01_Requirement_Document_User_Stories.md#us-02) | [TS-02](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-02) |
 | [TC-04](#tc-04) | Kiểm tra thông báo lỗi khi để trống Username nhưng có nhập Password | Functional_Testing/Authentication | Medium | Medium | [US-02](../01_Requirements/01_Requirement_Document_User_Stories.md#us-02) | [TS-02](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-02) |
 | [TC-05](#tc-05) | Kiểm tra từ chối đăng nhập khi nhập sai thông tin tài khoản hoặc mật khẩu | Functional_Testing/Authentication | High | High | [US-02](../01_Requirements/01_Requirement_Document_User_Stories.md#us-02) | [TS-03](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-03) |
-| [TC-06](#tc-06) | Kiểm tra chặn đăng nhập đối với tài khoản đã bị khóa (locked_out_user) | Functional_Testing/Authentication | High | High | [US-02](../01_Requirements/01_Requirement_Document_User_Stories.md#us-02) | [TS-04](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-04) |
+| [TC-06](#tc-06) | Kiểm tra từ chối đăng nhập và hiển thị thông báo lỗi khi tài khoản bị khóa | Functional_Testing/Authentication | High | High | [US-02](../01_Requirements/01_Requirement_Document_User_Stories.md#us-02) | [TS-04](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-04) |
 | [TC-07](#tc-07) | Kiểm tra thao tác đóng thông báo lỗi đăng nhập bằng nút 'X' | Functional_Testing/Authentication | Low | Low | [US-02](../01_Requirements/01_Requirement_Document_User_Stories.md#us-02) | [TS-02](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-02) |
 | [TC-08](#tc-08) | Kiểm tra đăng xuất tài khoản an toàn thông qua menu điều hướng Sidebar | Functional_Testing/Authentication | High | Critical | [US-03](../01_Requirements/01_Requirement_Document_User_Stories.md#us-03) | [TS-05](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-05) |
 | [TC-09](#tc-09) | Kiểm tra chặn truy cập trực tiếp URL trang nội bộ khi chưa đăng nhập | Functional_Testing/Authentication | High | Critical | [US-03](../01_Requirements/01_Requirement_Document_User_Stories.md#us-03) | [TS-05](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-05) |
@@ -36,8 +36,8 @@ Total Test Cases: 71 Ca kiểm thử
 | [TC-14](#tc-14) | Kiểm tra sắp xếp danh mục sản phẩm theo tên đảo ngược từ Z đến A | Functional_Testing/Product_Catalog | Medium | Medium | [US-05](../01_Requirements/01_Requirement_Document_User_Stories.md#us-05) | [TS-08](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-08) |
 | [TC-15](#tc-15) | Kiểm tra sắp xếp danh mục sản phẩm theo giá từ thấp đến cao (Price low to high) | Functional_Testing/Product_Catalog | High | High | [US-05](../01_Requirements/01_Requirement_Document_User_Stories.md#us-05) | [TS-09](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-09) |
 | [TC-16](#tc-16) | Kiểm tra sắp xếp danh mục sản phẩm theo giá từ cao đến thấp (Price high to low) | Functional_Testing/Product_Catalog | High | High | [US-05](../01_Requirements/01_Requirement_Document_User_Stories.md#us-05) | [TS-09](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-09) |
-| [TC-17](#tc-17) | Kiểm tra tính toàn vẹn của liên kết hình ảnh danh mục sản phẩm đối với tài khoản problem_user | Functional_Testing/Product_Catalog | Medium | Medium | [US-04](../01_Requirements/01_Requirement_Document_User_Stories.md#us-04) | [TS-06](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-06) |
-| [TC-18](#tc-18) | Kiểm tra bộ lọc sắp xếp danh mục sản phẩm không phát sinh lỗi ngoại lệ JavaScript khi đăng nhập bằng error_user | Functional_Testing/Product_Catalog | High | High | [US-05](../01_Requirements/01_Requirement_Document_User_Stories.md#us-05) | [TS-08](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-08) |
+| [TC-17](#tc-17) | Kiểm tra tính toàn vẹn và đường dẫn hiển thị của hình ảnh danh mục sản phẩm | Functional_Testing/Product_Catalog | Medium | Medium | [US-04](../01_Requirements/01_Requirement_Document_User_Stories.md#us-04) | [TS-06](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-06) |
+| [TC-18](#tc-18) | Kiểm tra khả năng sắp xếp danh mục sản phẩm theo giá không phát sinh lỗi ngoại lệ | Functional_Testing/Product_Catalog | High | High | [US-05](../01_Requirements/01_Requirement_Document_User_Stories.md#us-05) | [TS-08](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-08) |
 | [TC-19](#tc-19) | Kiểm tra thêm 1 sản phẩm vào giỏ hàng từ trang danh mục | Functional_Testing/Shopping_Cart | High | Critical | [US-06](../01_Requirements/01_Requirement_Document_User_Stories.md#us-06) | [TS-10](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-10) |
 | [TC-20](#tc-20) | Kiểm tra thêm nhiều sản phẩm vào giỏ hàng và đồng bộ bộ đếm | Functional_Testing/Shopping_Cart | High | High | [US-06](../01_Requirements/01_Requirement_Document_User_Stories.md#us-06) | [TS-10](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-10) |
 | [TC-21](#tc-21) | Kiểm tra thêm sản phẩm vào giỏ hàng từ trang chi tiết sản phẩm | Functional_Testing/Shopping_Cart | Medium | Medium | [US-06](../01_Requirements/01_Requirement_Document_User_Stories.md#us-06) | [TS-11](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-11) |
@@ -47,7 +47,7 @@ Total Test Cases: 71 Ca kiểm thử
 | [TC-25](#tc-25) | Kiểm tra xóa trực tiếp sản phẩm trên trang giỏ hàng (Cart Page) | Functional_Testing/Shopping_Cart | High | High | [US-07](../01_Requirements/01_Requirement_Document_User_Stories.md#us-07) | [TS-14](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-14) |
 | [TC-26](#tc-26) | Kiểm tra chức năng nút 'Continue Shopping' quay lại trang mua hàng | Functional_Testing/Shopping_Cart | Medium | Low | [US-07](../01_Requirements/01_Requirement_Document_User_Stories.md#us-07) | [TS-15](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-15) |
 | [TC-27](#tc-27) | Kiểm tra duy trì trạng thái giỏ hàng khi tải lại trang trình duyệt (F5 / Refresh) | Functional_Testing/Shopping_Cart | High | High | [US-08](../01_Requirements/01_Requirement_Document_User_Stories.md#us-08) | [TS-16](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-16) |
-| [TC-28](#tc-28) | Kiểm tra chức năng xóa sản phẩm khỏi giỏ hàng đối với sản phẩm Fleece Jacket khi đăng nhập bằng problem_user | Functional_Testing/Shopping_Cart | High | High | [US-06](../01_Requirements/01_Requirement_Document_User_Stories.md#us-06) | [TS-12](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-12) |
+| [TC-28](#tc-28) | Kiểm tra chức năng xóa sản phẩm Fleece Jacket khỏi giỏ hàng | Functional_Testing/Shopping_Cart | High | High | [US-06](../01_Requirements/01_Requirement_Document_User_Stories.md#us-06) | [TS-12](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-12) |
 | [TC-29](#tc-29) | Kiểm tra chặn quy trình thanh toán khi giỏ hàng không có sản phẩm nào (Empty Cart Checkout) | Functional_Testing/Shopping_Cart | High | High | [US-08](../01_Requirements/01_Requirement_Document_User_Stories.md#us-08) | [TS-17](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-17) |
 | [TC-30](#tc-30) | Kiểm tra chuyển hướng từ giỏ hàng sang Checkout Bước 1 | Functional_Testing/Checkout | High | Critical | [US-09](../01_Requirements/01_Requirement_Document_User_Stories.md#us-09) | [TS-18](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-18) |
 | [TC-31](#tc-31) | Kiểm tra nhập thông tin khách hàng hợp lệ tại Checkout Bước 1 | Functional_Testing/Checkout | High | Critical | [US-09](../01_Requirements/01_Requirement_Document_User_Stories.md#us-09) | [TS-19](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-19) |
@@ -62,13 +62,13 @@ Total Test Cases: 71 Ca kiểm thử
 | [TC-40](#tc-40) | Kiểm tra hủy bỏ thanh toán tại Bước 2 bằng nút 'Cancel' | Functional_Testing/Checkout | Medium | Low | [US-10](../01_Requirements/01_Requirement_Document_User_Stories.md#us-10) | [TS-24](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-24) |
 | [TC-41](#tc-41) | Kiểm tra hoàn tất đặt hàng thành công tại Checkout Bước 3 | Functional_Testing/Checkout | High | Critical | [US-11](../01_Requirements/01_Requirement_Document_User_Stories.md#us-11) | [TS-25](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-25) |
 | [TC-42](#tc-42) | Kiểm tra nút 'Back Home' đưa người dùng quay về trang chủ sau khi hoàn tất mua hàng | Functional_Testing/Checkout | Medium | Low | [US-11](../01_Requirements/01_Requirement_Document_User_Stories.md#us-11) | [TS-26](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-26) |
-| [TC-43](#tc-43) | Kiểm tra nhập liệu và lưu trữ giá trị tại trường Last Name trong form Checkout Step 1 với problem_user | Functional_Testing/Checkout | High | Critical | [US-09](../01_Requirements/01_Requirement_Document_User_Stories.md#us-09) | [TS-19](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-19) |
-| [TC-44](#tc-44) | Kiểm tra hoàn tất đơn hàng tại Checkout Step 2 không bị chặn bởi lỗi Runtime khi đăng nhập bằng error_user | Functional_Testing/Checkout | High | Blocker | [US-10](../01_Requirements/01_Requirement_Document_User_Stories.md#us-10) | [TS-24](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-24) |
+| [TC-43](#tc-43) | Kiểm tra tính chính xác và lưu trữ giá trị tại trường Last Name trong form Checkout Step 1 | Functional_Testing/Checkout | High | Critical | [US-09](../01_Requirements/01_Requirement_Document_User_Stories.md#us-09) | [TS-19](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-19) |
+| [TC-44](#tc-44) | Kiểm tra xử lý luồng hoàn tất đơn hàng tại Checkout Step 2 khi nhấn Finish | Functional_Testing/Checkout | High | Blocker | [US-10](../01_Requirements/01_Requirement_Document_User_Stories.md#us-10) | [TS-24](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-24) |
 | [TC-45](#tc-45) | Kiểm tra mở và đóng menu Sidebar | Functional_Testing/Sidebar_Navigation | Medium | Low | [US-12](../01_Requirements/01_Requirement_Document_User_Stories.md#us-12) | [TS-27](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-27) |
 | [TC-46](#tc-46) | Kiểm tra mục 'All Items' trong Sidebar đưa người dùng về trang danh mục | Functional_Testing/Sidebar_Navigation | Medium | Low | [US-12](../01_Requirements/01_Requirement_Document_User_Stories.md#us-12) | [TS-27](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-27) |
 | [TC-47](#tc-47) | Kiểm tra mục 'About' trong Sidebar điều hướng ra website chính thức của Sauce Labs | Functional_Testing/Sidebar_Navigation | Low | Low | [US-12](../01_Requirements/01_Requirement_Document_User_Stories.md#us-12) | [TS-27](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-27) |
 | [TC-48](#tc-48) | Kiểm tra chức năng 'Reset App State' đặt lại trạng thái ứng dụng và xóa sạch giỏ hàng | Functional_Testing/Sidebar_Navigation | High | High | [US-12](../01_Requirements/01_Requirement_Document_User_Stories.md#us-12) | [TS-27](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-27) |
-| [TC-49](#tc-49) | Kiểm tra tính hợp lệ của liên kết điều hướng 'About' trong Sidebar đối với problem_user | Functional_Testing/Sidebar_Navigation | Low | Low | [US-12](../01_Requirements/01_Requirement_Document_User_Stories.md#us-12) | [TS-27](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-27) |
+| [TC-49](#tc-49) | Kiểm tra tính hợp lệ của liên kết điều hướng 'About' trong Sidebar | Functional_Testing/Sidebar_Navigation | Low | Low | [US-12](../01_Requirements/01_Requirement_Document_User_Stories.md#us-12) | [TS-27](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-27) |
 | [TC-50](#tc-50) | Kiểm tra toàn diện quy trình mua sắm thương mại điện tử End-to-End từ đăng nhập đến nhận biên lai | Functional_Testing/End_to_End | High | Critical | [US-13](../01_Requirements/01_Requirement_Document_User_Stories.md#us-13) | [TS-28](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-28) |
 | [TC-51](#tc-51) | Kiểm tra API POST /api/v1/auth/login xác thực đăng nhập thành công với tài khoản hợp lệ | API_Testing | High | Critical | [US-14](../01_Requirements/01_Requirement_Document_User_Stories.md#us-14) | [TS-31](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-31) |
 | [TC-52](#tc-52) | Kiểm tra API POST /api/v1/auth/login xử lý từ chối đăng nhập đối với tài khoản bị khóa (HTTP 423 Locked) | API_Testing | High | High | [US-14](../01_Requirements/01_Requirement_Document_User_Stories.md#us-14) | [TS-31](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-31) |
@@ -76,19 +76,19 @@ Total Test Cases: 71 Ca kiểm thử
 | [TC-54](#tc-54) | Kiểm tra API POST /api/v1/cart/items thêm sản phẩm vào giỏ hàng và cập nhật tổng số lượng | API_Testing | High | High | [US-14](../01_Requirements/01_Requirement_Document_User_Stories.md#us-14) | [TS-31](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-31) |
 | [TC-55](#tc-55) | Kiểm tra API POST /api/v1/checkout/orders hoàn tất đơn hàng và tính toán tài chính tự động | API_Testing | High | Critical | [US-14](../01_Requirements/01_Requirement_Document_User_Stories.md#us-14) | [TS-31](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-31) |
 | [TC-56](#tc-56) | Kiểm tra CSDL: Xác minh mật khẩu người dùng được băm an toàn trong bảng users | Database_SQL_Testing | High | Critical | [US-15](../01_Requirements/01_Requirement_Document_User_Stories.md#us-15) | [TS-32](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-32) |
-| [TC-57](#tc-57) | Kiểm tra CSDL: Xác minh trạng thái khóa tài khoản trong bảng users đối với locked_out_user | Database_SQL_Testing | High | High | [US-15](../01_Requirements/01_Requirement_Document_User_Stories.md#us-15) | [TS-32](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-32) |
+| [TC-57](#tc-57) | Kiểm tra CSDL: Xác minh trạng thái khóa tài khoản trong bảng dữ liệu người dùng | Database_SQL_Testing | High | High | [US-15](../01_Requirements/01_Requirement_Document_User_Stories.md#us-15) | [TS-32](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-32) |
 | [TC-58](#tc-58) | Kiểm tra CSDL: Xác minh tính nhất quán của bảng danh mục sản phẩm và giá niêm yết | Database_SQL_Testing | High | High | [US-15](../01_Requirements/01_Requirement_Document_User_Stories.md#us-15) | [TS-32](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-32) |
 | [TC-59](#tc-59) | Kiểm tra CSDL: Xác minh ghi nhận bản ghi đơn hàng mới vào bảng orders sau khi thanh toán thành công | Database_SQL_Testing | High | Critical | [US-15](../01_Requirements/01_Requirement_Document_User_Stories.md#us-15) | [TS-32](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-32) |
 | [TC-60](#tc-60) | Kiểm tra CSDL: Xác minh chi tiết các mặt hàng trong bảng order_items liên kết đúng với đơn hàng | Database_SQL_Testing | High | High | [US-15](../01_Requirements/01_Requirement_Document_User_Stories.md#us-15) | [TS-32](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-32) |
 | [TC-61](#tc-61) | Kiểm tra phi chức năng: Đo lường thời gian phản hồi (Response Time SLA < 2.0s) khi tải trang danh mục sản phẩm | Non_Functional_Testing/Performance_Testing | Medium | Medium | [US-17](../01_Requirements/01_Requirement_Document_User_Stories.md#us-17) | [TS-34](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-34) |
-| [TC-62](#tc-62) | Kiểm tra phi chức năng: Phát hiện vi phạm SLA thời gian phản hồi nghiêm trọng (>5.0s) đối với performance_glitch_user | Non_Functional_Testing/Performance_Testing | Medium | Medium | [US-17](../01_Requirements/01_Requirement_Document_User_Stories.md#us-17) | [TS-34](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-34) |
+| [TC-62](#tc-62) | Kiểm tra phi chức năng: Đánh giá thời gian phản hồi tải trang theo tiêu chuẩn SLA (< 2.0s) | Non_Functional_Testing/Performance_Testing | Medium | Medium | [US-17](../01_Requirements/01_Requirement_Document_User_Stories.md#us-17) | [TS-34](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-34) |
 | [TC-63](#tc-63) | Kiểm tra phi chức năng: Kiểm tra các cờ bảo mật của Cookie phiên làm việc (Secure, HttpOnly, SameSite) | Non_Functional_Testing/Security_Testing | High | High | [US-16](../01_Requirements/01_Requirement_Document_User_Stories.md#us-16) | [TS-33](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-33) |
 | [TC-64](#tc-64) | Kiểm tra phi chức năng: Kiểm tra khả năng chống tấn công Cross-Site Scripting (XSS) trên form Checkout Step 1 | Non_Functional_Testing/Security_Testing | High | Critical | [US-16](../01_Requirements/01_Requirement_Document_User_Stories.md#us-16) | [TS-33](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-33) |
 | [TC-65](#tc-65) | Kiểm tra phi chức năng: Kiểm tra chống rò rỉ phiên làm việc khi sử dụng nút 'Back' của trình duyệt sau khi đăng xuất | Non_Functional_Testing/Security_Testing | High | High | [US-16](../01_Requirements/01_Requirement_Document_User_Stories.md#us-16) | [TS-33](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-33) |
 | [TC-66](#tc-66) | Kiểm tra phi chức năng: Kiểm tra điều hướng tuần tự bằng bàn phím (Keyboard Tab Order & Focus Ring) | Non_Functional_Testing/Accessibility_Testing | Medium | Medium | [US-17](../01_Requirements/01_Requirement_Document_User_Stories.md#us-17) | [TS-34](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-34) |
 | [TC-67](#tc-67) | Kiểm tra phi chức năng: Kiểm tra tên trợ năng (Accessible Names / aria-label) và độ tương phản màu sắc | Non_Functional_Testing/Accessibility_Testing | Medium | Low | [US-17](../01_Requirements/01_Requirement_Document_User_Stories.md#us-17) | [TS-34](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-34) |
 | [TC-68](#tc-68) | Kiểm tra phi chức năng: Tính nhất quán của phản hồi trực quan trên bộ đếm giỏ hàng | Non_Functional_Testing/Usability_Testing | Medium | Low | [US-17](../01_Requirements/01_Requirement_Document_User_Stories.md#us-17) | [TS-34](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-34) |
-| [TC-69](#tc-69) | Kiểm tra phi chức năng: Phát hiện lỗi căn chỉnh layout và vị trí các thành phần trên thanh Header khi đăng nhập bằng visual_user | Non_Functional_Testing/Usability_Testing | Low | Low | [US-17](../01_Requirements/01_Requirement_Document_User_Stories.md#us-17) | [TS-34](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-34) |
+| [TC-69](#tc-69) | Kiểm tra phi chức năng: Đánh giá độ đồng nhất và căn chỉnh layout của các thành phần trên thanh Header | Non_Functional_Testing/Usability_Testing | Low | Low | [US-17](../01_Requirements/01_Requirement_Document_User_Stories.md#us-17) | [TS-34](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-34) |
 | [TC-70](#tc-70) | Kiểm tra phi chức năng: Kiểm tra tính tương thích hiển thị Responsive UI trên màn hình Mobile Viewport | Non_Functional_Testing/Compatibility_Testing | Medium | Medium | [US-17](../01_Requirements/01_Requirement_Document_User_Stories.md#us-17) | [TS-34](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-34) |
 | [TC-71](#tc-71) | Kiểm tra phi chức năng: Kiểm tra khả năng tương thích hiển thị và hoạt động trên nhiều trình duyệt (Cross-Browser) | Non_Functional_Testing/Compatibility_Testing | Medium | Medium | [US-17](../01_Requirements/01_Requirement_Document_User_Stories.md#us-17) | [TS-34](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-34) |
 
@@ -344,12 +344,12 @@ Xem chi tiết: [TC-05.md](Functional_Testing/Authentication/TC-05.md)
 
 <a id="tc-06"></a>
 
-## Test Case: TC-06 - Kiểm tra chặn đăng nhập đối với tài khoản đã bị khóa (locked_out_user)
+## Test Case: TC-06 - Kiểm tra từ chối đăng nhập và hiển thị thông báo lỗi khi tài khoản bị khóa
 
 | **Field** | **Value** |
 |:---|:---|
 | **Test Case ID** | TC-06 |
-| **Name** | Kiểm tra chặn đăng nhập đối với tài khoản đã bị khóa (locked_out_user) |
+| **Name** | Kiểm tra từ chối đăng nhập và hiển thị thông báo lỗi khi tài khoản bị khóa |
 | **Folder** | Functional_Testing/Authentication |
 | **Component** | Login Page |
 | **Status** | Approved |
@@ -872,12 +872,12 @@ Xem chi tiết: [TC-16.md](Functional_Testing/Product_Catalog/TC-16.md)
 
 <a id="tc-17"></a>
 
-## Test Case: TC-17 - Kiểm tra tính toàn vẹn của liên kết hình ảnh danh mục sản phẩm đối với tài khoản problem_user
+## Test Case: TC-17 - Kiểm tra tính toàn vẹn và đường dẫn hiển thị của hình ảnh danh mục sản phẩm
 
 | **Field** | **Value** |
 |:---|:---|
 | **Test Case ID** | TC-17 |
-| **Name** | Kiểm tra tính toàn vẹn của liên kết hình ảnh danh mục sản phẩm đối với tài khoản problem_user |
+| **Name** | Kiểm tra tính toàn vẹn và đường dẫn hiển thị của hình ảnh danh mục sản phẩm |
 | **Folder** | Functional_Testing/Product_Catalog |
 | **Component** | Product Catalog / Asset Integrity |
 | **Status** | Approved |
@@ -886,7 +886,7 @@ Xem chi tiết: [TC-16.md](Functional_Testing/Product_Catalog/TC-16.md)
 | **Owner** | QA - Khổng Đức Anh |
 | **UserStoryID** | US-04 |
 | **TestScenarioID** | TS-06 |
-| **Test Type** | UI / Asset Integrity / Defect Detection |
+| **Test Type** | UI / Asset Integrity |
 | **Execution Environment** | Chrome Desktop (v124+) / macOS Sonoma / Screen 1920x1080 |
 | **Precondition** | Trình duyệt chưa có phiên làm việc. |
 | **Test Data** | Username: problem_user | Password: secret_sauce |
@@ -911,7 +911,7 @@ Tất cả 6 sản phẩm hiển thị đúng hình ảnh tương ứng (Balo hi
 - **Actual Result:** -
 - **Execution Date & Time:** -
 - **Linked Bug / Defect ID:** -
-- **Comments / Notes:** Bug cố tình của SauceDemo: Toàn bộ ảnh sản phẩm của problem_user bị trỏ về ảnh con chó lỗi /static/media/sl-404.168b1cce.jpg.
+- **Comments / Notes:** Kiểm tra tính toàn vẹn của đường dẫn tài nguyên hình ảnh trên trang danh mục sản phẩm.
 
 
 Xem chi tiết: [TC-17.md](Functional_Testing/Product_Catalog/TC-17.md)
@@ -921,12 +921,12 @@ Xem chi tiết: [TC-17.md](Functional_Testing/Product_Catalog/TC-17.md)
 
 <a id="tc-18"></a>
 
-## Test Case: TC-18 - Kiểm tra bộ lọc sắp xếp danh mục sản phẩm không phát sinh lỗi ngoại lệ JavaScript khi đăng nhập bằng error_user
+## Test Case: TC-18 - Kiểm tra khả năng sắp xếp danh mục sản phẩm theo giá không phát sinh lỗi ngoại lệ
 
 | **Field** | **Value** |
 |:---|:---|
 | **Test Case ID** | TC-18 |
-| **Name** | Kiểm tra bộ lọc sắp xếp danh mục sản phẩm không phát sinh lỗi ngoại lệ JavaScript khi đăng nhập bằng error_user |
+| **Name** | Kiểm tra khả năng sắp xếp danh mục sản phẩm theo giá không phát sinh lỗi ngoại lệ |
 | **Folder** | Functional_Testing/Product_Catalog |
 | **Component** | Product Catalog / Sorting |
 | **Status** | Approved |
@@ -935,7 +935,7 @@ Xem chi tiết: [TC-17.md](Functional_Testing/Product_Catalog/TC-17.md)
 | **Owner** | QA - Khổng Đức Anh |
 | **UserStoryID** | US-05 |
 | **TestScenarioID** | TS-08 |
-| **Test Type** | Error Handling / UI Exception / Defect Detection |
+| **Test Type** | Error Handling / UI Functional |
 | **Execution Environment** | Chrome Desktop (v124+) / macOS Sonoma / Screen 1920x1080 |
 | **Precondition** | Đã đăng nhập bằng 'error_user'; đang ở trang '/inventory.html'. |
 | **Test Data** | Username: error_user | Tùy chọn sắp xếp: 'Price (low to high)' |
@@ -959,7 +959,7 @@ Danh sách sản phẩm được sắp xếp lại theo giá tiền tăng dần 
 - **Actual Result:** -
 - **Execution Date & Time:** -
 - **Linked Bug / Defect ID:** -
-- **Comments / Notes:** Bug cố tình của SauceDemo: Khi error_user đổi bộ lọc, mã JavaScript kích hoạt lệnh window.alert('Sorting is broken! This error has been reported to Backtrace.'), danh sách không được sắp xếp lại.
+- **Comments / Notes:** Kiểm tra khả năng xử lý sự kiện thay đổi tùy chọn sắp xếp trên dropdown filter.
 
 
 Xem chi tiết: [TC-18.md](Functional_Testing/Product_Catalog/TC-18.md)
@@ -1401,12 +1401,12 @@ Xem chi tiết: [TC-27.md](Functional_Testing/Shopping_Cart/TC-27.md)
 
 <a id="tc-28"></a>
 
-## Test Case: TC-28 - Kiểm tra chức năng xóa sản phẩm khỏi giỏ hàng đối với sản phẩm Fleece Jacket khi đăng nhập bằng problem_user
+## Test Case: TC-28 - Kiểm tra chức năng xóa sản phẩm Fleece Jacket khỏi giỏ hàng
 
 | **Field** | **Value** |
 |:---|:---|
 | **Test Case ID** | TC-28 |
-| **Name** | Kiểm tra chức năng xóa sản phẩm khỏi giỏ hàng đối với sản phẩm Fleece Jacket khi đăng nhập bằng problem_user |
+| **Name** | Kiểm tra chức năng xóa sản phẩm Fleece Jacket khỏi giỏ hàng |
 | **Folder** | Functional_Testing/Shopping_Cart |
 | **Component** | Shopping Cart Management |
 | **Status** | Approved |
@@ -1415,7 +1415,7 @@ Xem chi tiết: [TC-27.md](Functional_Testing/Shopping_Cart/TC-27.md)
 | **Owner** | QA - Khổng Đức Anh |
 | **UserStoryID** | US-06 |
 | **TestScenarioID** | TS-12 |
-| **Test Type** | Functional / Negative / Defect Detection |
+| **Test Type** | Functional / Cart Operations |
 | **Execution Environment** | Chrome Desktop (v124+) / macOS Sonoma / Screen 1920x1080 |
 | **Precondition** | Đã đăng nhập bằng 'problem_user'; đã thêm 'Sauce Labs Fleece Jacket' vào giỏ hàng. |
 | **Test Data** | Username: problem_user | Sản phẩm: Sauce Labs Fleece Jacket (\$49.99) |
@@ -1440,7 +1440,7 @@ Nút 'Remove' chuyển lại thành 'Add to cart' và huy hiệu giỏ hàng gi�
 - **Actual Result:** -
 - **Execution Date & Time:** -
 - **Linked Bug / Defect ID:** -
-- **Comments / Notes:** Bug cố tình của SauceDemo: Nút Remove của áo Fleece Jacket bị vô hiệu hóa sự kiện onClick, người dùng không thể xóa món hàng này.
+- **Comments / Notes:** Kiểm tra khả năng loại bỏ sản phẩm riêng lẻ ra khỏi giỏ hàng từ trang danh mục.
 
 
 Xem chi tiết: [TC-28.md](Functional_Testing/Shopping_Cart/TC-28.md)
@@ -1464,7 +1464,7 @@ Xem chi tiết: [TC-28.md](Functional_Testing/Shopping_Cart/TC-28.md)
 | **Owner** | QA - Khổng Đức Anh |
 | **UserStoryID** | US-08 |
 | **TestScenarioID** | TS-17 |
-| **Test Type** | Functional / Negative / Business Logic / Defect Detection |
+| **Test Type** | Functional / Negative / Business Logic |
 | **Execution Environment** | Chrome Desktop (v124+) / macOS Sonoma / Screen 1920x1080 |
 | **Precondition** | Người dùng đã đăng nhập với 'standard_user', giỏ hàng đang trống hoàn toàn (huy hiệu giỏ hàng không hiển thị). |
 | **Test Data** | User: standard_user | Giỏ hàng: 0 sản phẩm |
@@ -2124,12 +2124,12 @@ Xem chi tiết: [TC-42.md](Functional_Testing/Checkout/TC-42.md)
 
 <a id="tc-43"></a>
 
-## Test Case: TC-43 - Kiểm tra nhập liệu và lưu trữ giá trị tại trường Last Name trong form Checkout Step 1 với problem_user
+## Test Case: TC-43 - Kiểm tra tính chính xác và lưu trữ giá trị tại trường Last Name trong form Checkout Step 1
 
 | **Field** | **Value** |
 |:---|:---|
 | **Test Case ID** | TC-43 |
-| **Name** | Kiểm tra nhập liệu và lưu trữ giá trị tại trường Last Name trong form Checkout Step 1 với problem_user |
+| **Name** | Kiểm tra tính chính xác và lưu trữ giá trị tại trường Last Name trong form Checkout Step 1 |
 | **Folder** | Functional_Testing/Checkout |
 | **Component** | Checkout Workflow / Form Handling |
 | **Status** | Approved |
@@ -2138,7 +2138,7 @@ Xem chi tiết: [TC-42.md](Functional_Testing/Checkout/TC-42.md)
 | **Owner** | QA - Khổng Đức Anh |
 | **UserStoryID** | US-09 |
 | **TestScenarioID** | TS-19 |
-| **Test Type** | Functional / Form Validation / Defect Detection |
+| **Test Type** | Functional / Form Validation |
 | **Execution Environment** | Chrome Desktop (v124+) / macOS Sonoma / Screen 1920x1080 |
 | **Precondition** | Đã đăng nhập bằng 'problem_user'; giỏ hàng có ít nhất 1 sản phẩm; đang ở trang '/checkout-step-one.html'. |
 | **Test Data** | First Name: 'Alex' | Last Name: 'Smith' | Postal Code: '90001' |
@@ -2165,7 +2165,7 @@ Xác minh trường 'Last Name' nhận đúng ký tự người dùng gõ vào v
 - **Actual Result:** -
 - **Execution Date & Time:** -
 - **Linked Bug / Defect ID:** -
-- **Comments / Notes:** Bug Critical cố tình của SauceDemo: Trường Last Name bị khóa hoặc tự động ghi đè, hệ thống luôn báo lỗi 'Error: Last Name is required', chặn đứng toàn bộ luồng thanh toán của problem_user.
+- **Comments / Notes:** Kiểm tra tính toàn vẹn của dữ liệu form nhập liệu trước khi chuyển tiếp sang Bước 2.
 
 
 Xem chi tiết: [TC-43.md](Functional_Testing/Checkout/TC-43.md)
@@ -2175,12 +2175,12 @@ Xem chi tiết: [TC-43.md](Functional_Testing/Checkout/TC-43.md)
 
 <a id="tc-44"></a>
 
-## Test Case: TC-44 - Kiểm tra hoàn tất đơn hàng tại Checkout Step 2 không bị chặn bởi lỗi Runtime khi đăng nhập bằng error_user
+## Test Case: TC-44 - Kiểm tra xử lý luồng hoàn tất đơn hàng tại Checkout Step 2 khi nhấn Finish
 
 | **Field** | **Value** |
 |:---|:---|
 | **Test Case ID** | TC-44 |
-| **Name** | Kiểm tra hoàn tất đơn hàng tại Checkout Step 2 không bị chặn bởi lỗi Runtime khi đăng nhập bằng error_user |
+| **Name** | Kiểm tra xử lý luồng hoàn tất đơn hàng tại Checkout Step 2 khi nhấn Finish |
 | **Folder** | Functional_Testing/Checkout |
 | **Component** | Checkout Workflow / Transaction |
 | **Status** | Approved |
@@ -2189,7 +2189,7 @@ Xem chi tiết: [TC-43.md](Functional_Testing/Checkout/TC-43.md)
 | **Owner** | QA - Khổng Đức Anh |
 | **UserStoryID** | US-10 |
 | **TestScenarioID** | TS-24 |
-| **Test Type** | Functional / Transaction Integrity / Defect Detection |
+| **Test Type** | Functional / Transaction Integrity |
 | **Execution Environment** | Chrome Desktop (v124+) / macOS Sonoma / Screen 1920x1080 |
 | **Precondition** | Đã đăng nhập bằng 'error_user'; đã điền xong Bước 1; đang ở '/checkout-step-two.html'. |
 | **Test Data** | Username: error_user | Sản phẩm trong giỏ: 1 món bất kỳ |
@@ -2213,7 +2213,7 @@ Hệ thống tiếp nhận đơn hàng thành công và chuyển hướng đến
 - **Actual Result:** -
 - **Execution Date & Time:** -
 - **Linked Bug / Defect ID:** -
-- **Comments / Notes:** Bug Blocker cố tình của SauceDemo: Nhấp nút Finish văng lỗi runtime exception không bắt được, chặn người dùng hoàn tất giao dịch.
+- **Comments / Notes:** Kiểm tra tính liên tục và khả năng xử lý giao dịch tại bước hoàn tất đơn hàng.
 
 
 Xem chi tiết: [TC-44.md](Functional_Testing/Checkout/TC-44.md)
@@ -2415,12 +2415,12 @@ Xem chi tiết: [TC-48.md](Functional_Testing/Sidebar_Navigation/TC-48.md)
 
 <a id="tc-49"></a>
 
-## Test Case: TC-49 - Kiểm tra tính hợp lệ của liên kết điều hướng 'About' trong Sidebar đối với problem_user
+## Test Case: TC-49 - Kiểm tra tính hợp lệ của liên kết điều hướng 'About' trong Sidebar
 
 | **Field** | **Value** |
 |:---|:---|
 | **Test Case ID** | TC-49 |
-| **Name** | Kiểm tra tính hợp lệ của liên kết điều hướng 'About' trong Sidebar đối với problem_user |
+| **Name** | Kiểm tra tính hợp lệ của liên kết điều hướng 'About' trong Sidebar |
 | **Folder** | Functional_Testing/Sidebar_Navigation |
 | **Component** | Sidebar Navigation / Broken Link |
 | **Status** | Approved |
@@ -2429,7 +2429,7 @@ Xem chi tiết: [TC-48.md](Functional_Testing/Sidebar_Navigation/TC-48.md)
 | **Owner** | QA - Khổng Đức Anh |
 | **UserStoryID** | US-12 |
 | **TestScenarioID** | TS-27 |
-| **Test Type** | Navigation / Broken Link / Defect Detection |
+| **Test Type** | Navigation / Broken Link |
 | **Execution Environment** | Chrome Desktop (v124+) / macOS Sonoma / Screen 1920x1080 |
 | **Precondition** | Đã đăng nhập bằng 'problem_user'. |
 | **Test Data** | Username: problem_user |
@@ -2453,7 +2453,7 @@ Trình duyệt chuyển hướng thành công đến trang chủ chính thức '
 - **Actual Result:** -
 - **Execution Date & Time:** -
 - **Linked Bug / Defect ID:** -
-- **Comments / Notes:** Bug cố tình của SauceDemo: Đường dẫn About bị gắn sai URL dẫn đến trang lỗi 404 Not Found.
+- **Comments / Notes:** Kiểm tra tính chính xác của đường dẫn liên kết ngoại bộ trong thanh điều hướng Sidebar.
 
 
 Xem chi tiết: [TC-49.md](Functional_Testing/Sidebar_Navigation/TC-49.md)
@@ -2812,12 +2812,12 @@ Xem chi tiết: [TC-56.md](Database_SQL_Testing/TC-56.md)
 
 <a id="tc-57"></a>
 
-## Test Case: TC-57 - Kiểm tra CSDL: Xác minh trạng thái khóa tài khoản trong bảng users đối với locked_out_user
+## Test Case: TC-57 - Kiểm tra CSDL: Xác minh trạng thái khóa tài khoản trong bảng dữ liệu người dùng
 
 | **Field** | **Value** |
 |:---|:---|
 | **Test Case ID** | TC-57 |
-| **Name** | Kiểm tra CSDL: Xác minh trạng thái khóa tài khoản trong bảng users đối với locked_out_user |
+| **Name** | Kiểm tra CSDL: Xác minh trạng thái khóa tài khoản trong bảng dữ liệu người dùng |
 | **Folder** | Database_SQL_Testing |
 | **Component** | Users Table |
 | **Status** | Approved |
@@ -3057,12 +3057,12 @@ Xem chi tiết: [TC-61.md](Non_Functional_Testing/Performance_Testing/TC-61.md)
 
 <a id="tc-62"></a>
 
-## Test Case: TC-62 - Kiểm tra phi chức năng: Phát hiện vi phạm SLA thời gian phản hồi nghiêm trọng (>5.0s) đối với performance_glitch_user
+## Test Case: TC-62 - Kiểm tra phi chức năng: Đánh giá thời gian phản hồi tải trang theo tiêu chuẩn SLA (< 2.0s)
 
 | **Field** | **Value** |
 |:---|:---|
 | **Test Case ID** | TC-62 |
-| **Name** | Kiểm tra phi chức năng: Phát hiện vi phạm SLA thời gian phản hồi nghiêm trọng (>5.0s) đối với performance_glitch_user |
+| **Name** | Kiểm tra phi chức năng: Đánh giá thời gian phản hồi tải trang theo tiêu chuẩn SLA (< 2.0s) |
 | **Folder** | Non_Functional_Testing/Performance_Testing |
 | **Component** | Performance / Latency Glitch |
 | **Status** | Approved |
@@ -3071,14 +3071,14 @@ Xem chi tiết: [TC-61.md](Non_Functional_Testing/Performance_Testing/TC-61.md)
 | **Owner** | QA - Khổng Đức Anh |
 | **UserStoryID** | US-17 |
 | **TestScenarioID** | TS-34 |
-| **Test Type** | Performance SLA / Response Time / Defect Detection |
+| **Test Type** | Performance SLA / Response Time |
 | **Execution Environment** | Chrome Desktop (v124+) / macOS Sonoma / Screen 1920x1080 |
 | **Precondition** | Trình duyệt chưa có phiên làm việc; kết nối mạng ổn định (High-speed Broadband). |
 | **Test Data** | Username: performance_glitch_user | Password: secret_sauce |
 | **Postcondition** | Người dùng chuyển trang nhanh chóng. |
 
 ### 1. Objective
-Xác minh thời gian từ lúc nhấn 'Login' đến khi trang danh mục hiển thị đầy đủ phải đáp ứng tiêu chuẩn hiệu năng phần mềm (Response Time SLA < 2 giây), bẫy lỗi nghẽn mạng nhân tạo.
+Xác minh thời gian từ lúc nhấn 'Login' đến khi trang danh mục hiển thị đầy đủ phải đáp ứng tiêu chuẩn hiệu năng phần mềm (Response Time SLA < 2 giây).
 
 ### 2. Test Steps
 
@@ -3095,7 +3095,7 @@ Trang danh mục tải xong hoàn toàn trong thời gian dưới 2.0 giây, man
 - **Actual Result:** -
 - **Execution Date & Time:** -
 - **Linked Bug / Defect ID:** -
-- **Comments / Notes:** Bug cố tình của SauceDemo: performance_glitch_user bị chèn độ trễ nhân tạo 5 giây (5000ms delay), vi phạm nghiêm trọng SLA trải nghiệm người dùng.
+- **Comments / Notes:** Kiểm tra độ trễ phản hồi trang trong quá trình xác thực và điều hướng vào danh mục.
 
 
 Xem chi tiết: [TC-62.md](Non_Functional_Testing/Performance_Testing/TC-62.md)
@@ -3401,12 +3401,12 @@ Xem chi tiết: [TC-68.md](Non_Functional_Testing/Usability_Testing/TC-68.md)
 
 <a id="tc-69"></a>
 
-## Test Case: TC-69 - Kiểm tra phi chức năng: Phát hiện lỗi căn chỉnh layout và vị trí các thành phần trên thanh Header khi đăng nhập bằng visual_user
+## Test Case: TC-69 - Kiểm tra phi chức năng: Đánh giá độ đồng nhất và căn chỉnh layout của các thành phần trên thanh Header
 
 | **Field** | **Value** |
 |:---|:---|
 | **Test Case ID** | TC-69 |
-| **Name** | Kiểm tra phi chức năng: Phát hiện lỗi căn chỉnh layout và vị trí các thành phần trên thanh Header khi đăng nhập bằng visual_user |
+| **Name** | Kiểm tra phi chức năng: Đánh giá độ đồng nhất và căn chỉnh layout của các thành phần trên thanh Header |
 | **Folder** | Non_Functional_Testing/Usability_Testing |
 | **Component** | UI Layout / Header Alignment |
 | **Status** | Approved |
@@ -3415,14 +3415,14 @@ Xem chi tiết: [TC-68.md](Non_Functional_Testing/Usability_Testing/TC-68.md)
 | **Owner** | QA - Khổng Đức Anh |
 | **UserStoryID** | US-17 |
 | **TestScenarioID** | TS-34 |
-| **Test Type** | Visual Regression / UI Layout / Defect Detection |
+| **Test Type** | Visual Regression / UI Layout |
 | **Execution Environment** | Chrome Desktop (v124+) / macOS Sonoma / Screen 1920x1080 |
 | **Precondition** | Đang ở trang '/inventory.html'. |
 | **Test Data** | Username: visual_user | Password: secret_sauce |
 | **Postcondition** | Giao diện trực quan đẹp mắt, đúng chuẩn thiết kế. |
 
 ### 1. Objective
-Xác minh tính nhất quán của giao diện người dùng (Pixel-perfect & Visual Alignment), phát hiện lỗi biểu tượng giỏ hàng và menu bị xô lệch tọa độ so với thiết kế chuẩn.
+Xác minh tính nhất quán của giao diện người dùng (Pixel-perfect & Visual Alignment), kiểm tra biểu tượng giỏ hàng và menu không bị xô lệch tọa độ so với thiết kế chuẩn.
 
 ### 2. Test Steps
 
@@ -3439,7 +3439,7 @@ Toàn bộ các biểu tượng căn chỉnh ngay ngắn, đúng lề phải và
 - **Actual Result:** -
 - **Execution Date & Time:** -
 - **Linked Bug / Defect ID:** -
-- **Comments / Notes:** Bug cố tình của visual_user: Biểu tượng giỏ hàng bị dịch chuyển vị trí bất thường và nút bấm bị áp dụng CSS class sai lệch.
+- **Comments / Notes:** Kiểm tra vị trí và định dạng CSS của các biểu tượng trên thanh điều hướng Header.
 
 
 Xem chi tiết: [TC-69.md](Non_Functional_Testing/Usability_Testing/TC-69.md)

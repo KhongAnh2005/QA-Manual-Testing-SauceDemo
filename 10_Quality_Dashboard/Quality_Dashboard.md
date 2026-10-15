@@ -22,20 +22,18 @@ Date: 30/09/2026
 
 Bảng chỉ số kiểm thử định lượng tổng hợp đánh giá chất lượng toàn diện của sản phẩm sau Vòng kiểm thử 1:
 
-| Chỉ Số Kiểm Thử (KPI) | Giá Trị Thực Tế | Ngưỡng Mục Tiêu | Đánh Giá |
+| **Metric** | **Actual** | **Target** | **Status** |
 |:---|:---:|:---:|:---:|
-| Total Planned Tests | 71 TCs | 100% Kế hoạch | Đạt |
-| Executed Tests | 61 TCs | 85.9% Tổng Kế Hoạch | Đạt |
-| Passed Tests | 51 TCs | > 80% Executed | Đạt |
-| Failed Tests | 10 TCs | Bẫy trúng lỗi hệ thống | Đạt |
-| Blocked Tests | 10 TCs | Không có môi trường API/DB | Blocked |
-| Executed Pass Rate | 83.6% | > 80.0% | Vượt Chỉ Tiêu |
-| Overall Pass Rate | 71.8% | > 70.0% | Đạt Chuẩn |
-| Requirement Coverage | 100.0% | 100% (Zero Gap) | Hoàn Hảo |
-| Overall Defect Density | 0.14 | < 0.20 | Tốt |
-| Open Critical Defects | 1 Bug (BUG-06) | 0 Critical | Blocker |
-
-<br>
+| Total Planned Tests | 71 TCs | - | Completed (100%) |
+| Executed Tests | 61 TCs | > 90.0% | 85.9% (10 Blocked) |
+| Passed Tests | 51 TCs | - | 83.6% of Executed |
+| Failed Tests | 10 TCs | - | 16.4% of Executed |
+| Blocked Tests | 10 TCs | - | 14.1% of Planned (No Backend/DB) |
+| Pass Rate (Executed Tests) | 83.6% | > 90.0% | Below Target |
+| Pass Rate (All Planned Tests) | 71.8% | > 90.0% | Below Target (Includes Blocked) |
+| Requirement Coverage | 100.0% | 100.0% | Target Met |
+| Defect Density | 0.14 | < 0.20 | Target Met |
+| Open Critical Defects | 1 Bug (BUG-06) | 0 | Blocker for Production |
 
 ---
 
@@ -44,8 +42,6 @@ Bảng chỉ số kiểm thử định lượng tổng hợp đánh giá chất 
 
 Biểu đồ tròn thể hiện tỷ lệ phân bổ kết quả thực thi trên toàn bộ 71 ca kiểm thử:
 
-<br>
-
 ```mermaid
 pie title Phân Bổ Kết Quả Thực Thi (Round 1 - 71 Test Cases)
     "Passed (51 TCs)" : 51
@@ -53,28 +49,18 @@ pie title Phân Bổ Kết Quả Thực Thi (Round 1 - 71 Test Cases)
     "Blocked (10 TCs)" : 10
 ```
 
-<br>
-
----
-
-<br>
-
 ### Tóm Tắt Tỷ Lệ Thực Thi
 
-- **Passed (Đạt):** 51 ca kiểm thử (71.8% tổng số kế hoạch, đạt **83.6%** trên các ca thực thi thực tế).
-- **Failed (Lỗi):** 10 ca kiểm thử (14.1% tổng số) — bẫy trúng toàn bộ 10 lỗi thực tế của ứng dụng.
-- **Blocked (Chặn):** 10 ca kiểm thử (14.1% tổng số) — các ca thuộc phân hệ API và SQL CSDL do không có môi trường backend khả dụng.
-
-<br>
+- **Passed:** 51 ca kiểm thử (83.6% trên số ca thực thi, 71.8% trên tổng kế hoạch).
+- **Failed:** 10 ca kiểm thử (16.4% trên số ca thực thi, 14.1% trên tổng kế hoạch) — phát hiện 10 khiếm khuyết thực tế trong hệ thống.
+- **Blocked:** 10 ca kiểm thử (14.1% trên tổng kế hoạch) — các ca thuộc phân hệ API và SQL CSDL do không có môi trường backend khả dụng.
 
 ---
 
 <a id="3-defect-density-by-feature-area"></a>
 ## 3. Defect Density by Feature Area
 
-Mật độ lỗi kỹ thuật được tính theo công thức: `Defect Density = Số Bugs / Tổng Test Cases` của từng phân hệ. Chỉ số này giúp xác định những vùng tập trung rủi ro cao trong hệ thống:
-
-<br>
+Mật độ lỗi kỹ thuật được tính theo công thức: Defect Density = Số Bugs / Tổng Test Cases của từng phân hệ. Chỉ số này giúp xác định những vùng tập trung rủi ro cao trong hệ thống:
 
 ```mermaid
 xychart-beta
@@ -84,30 +70,22 @@ xychart-beta
     bar [0.00, 0.22, 0.09, 0.20, 0.20, 0.00, 0.27]
 ```
 
-<br>
-
----
-
-<br>
-
 ### Bảng Thống Kê & Đối Soát Chi Tiết Từng Phân Hệ
 
 Dưới đây là bảng số liệu phân rã chi tiết giữa quy mô kiểm thử, số lượng lỗi phát hiện và mức độ rủi ro tương ứng:
 
-| Phân Hệ (Feature Area) | Quy Mô (TCs) | Đạt (Pass) | Lỗi (Fail) | Chặn (Blocked) | Tỷ Lệ Pass | Số Lỗi | Mật Độ Lỗi | Mức Rủi Ro |
+| **Component / Module** | **Planned** | **Passed** | **Failed** | **Blocked** | **Executed Pass Rate** | **Defects** | **Defect Density** | **Risk Level** |
 |:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| Authentication & Login | 9 | 9 | 0 | 0 | 100.0% | 0 | 0.00 | Thấp (Low) |
-| Product Catalog & Details | 9 | 7 | 2 | 0 | 77.8% | 2 | 0.22 | Trung Bình |
-| Shopping Cart Management | 11 | 9 | 2 | 0 | 81.8% | 2 | 0.18 | Trung Bình |
-| Checkout & Order Placement | 15 | 13 | 2 | 0 | 86.7% | 2 | 0.13 | Cao (High) |
-| Sidebar Navigation & State | 5 | 4 | 1 | 0 | 80.0% | 1 | 0.20 | Trung Bình |
-| End-to-End Core Journey | 1 | 1 | 0 | 0 | 100.0% | 0 | 0.00 | Thấp (Low) |
-| Non-Functional Quality | 11 | 8 | 3 | 0 | 72.7% | 3 | 0.27 | Cao (High) |
-| Backend API Testing | 5 | 0 | 0 | 5 | N/A | 0 | 0.00 | Môi Trường |
-| Database SQL Testing | 5 | 0 | 0 | 5 | N/A | 0 | 0.00 | Môi Trường |
-| **TỔNG HỢP TOÀN HỆ THỐNG** | **71** | **51** | **10** | **10** | **71.8%** | **10** | **0.14** | **Cao (Critical)** |
-
-<br>
+| Authentication & Login | 9 | 9 | 0 | 0 | 100.0% | 0 | 0.00 | Low |
+| Product Catalog & Details | 9 | 7 | 2 | 0 | 77.8% | 2 | 0.22 | Medium |
+| Shopping Cart Management | 11 | 9 | 2 | 0 | 81.8% | 2 | 0.18 | Medium |
+| Checkout & Order Placement | 15 | 13 | 2 | 0 | 86.7% | 2 | 0.13 | High |
+| Sidebar Navigation & State | 5 | 4 | 1 | 0 | 80.0% | 1 | 0.20 | Medium |
+| End-to-End Core Journey | 1 | 1 | 0 | 0 | 100.0% | 0 | 0.00 | Low |
+| Non-Functional Quality | 11 | 8 | 3 | 0 | 72.7% | 3 | 0.27 | High |
+| Backend API Testing | 5 | 0 | 0 | 5 | N/A | 0 | 0.00 | Blocked |
+| Database SQL Testing | 5 | 0 | 0 | 5 | N/A | 0 | 0.00 | Blocked |
+| Total / Overall | 71 | 51 | 10 | 10 | 83.6% | 10 | 0.14 | Critical |
 
 ---
 
@@ -115,8 +93,6 @@ Dưới đây là bảng số liệu phân rã chi tiết giữa quy mô kiểm 
 ## 4. Defect Severity & Priority Distribution
 
 Phân tích cơ cấu phân bổ của 10 lỗi phát hiện theo mức độ nghiêm trọng kỹ thuật (Severity) và ma trận đối chiếu với độ ưu tiên kinh doanh (Priority):
-
-<br>
 
 ```mermaid
 pie title Phân Bổ 10 Lỗi Theo Độ Nghiêm Trọng (Severity)
@@ -126,24 +102,16 @@ pie title Phân Bổ 10 Lỗi Theo Độ Nghiêm Trọng (Severity)
     "Low (1 Bug - BUG-10)" : 1
 ```
 
-<br>
-
----
-
-<br>
-
 ### Ma Trận Severity vs Priority (2x2)
 
 Ma trận đối chiếu giữa mức độ nghiêm trọng kỹ thuật (Severity - do QA đánh giá) và mức độ ưu tiên khắc phục (Priority - do PO/QA thống nhất):
 
-| Severity \ Priority | High Priority (Khắc Phục Ngay) | Medium Priority (Kế Hoạch Sprint) | Low Priority (Backlog) |
+| **Severity \ Priority** | **High Priority (Khắc Phục Ngay)** | **Medium Priority (Kế Hoạch Sprint)** | **Low Priority (Backlog)** |
 |:---|:---|:---|:---|
-| **Critical** | `BUG-06` (Finish runtime exception) | - | - |
-| **High** | `BUG-03`, `BUG-04`, `BUG-05`, `BUG-09` | - | - |
-| **Medium** | `BUG-01` | `BUG-02`, `BUG-07`, `BUG-08` | - |
-| **Low** | - | - | `BUG-10` |
-
-<br>
+| Critical | BUG-06 (Finish runtime exception) | - | - |
+| High | BUG-03, BUG-04, BUG-05, BUG-09 | - | - |
+| Medium | BUG-01 | BUG-02, BUG-07, BUG-08 | - |
+| Low | - | - | BUG-10 |
 
 ---
 

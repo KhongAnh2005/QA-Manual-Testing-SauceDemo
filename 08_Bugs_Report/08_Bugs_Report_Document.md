@@ -4,7 +4,7 @@ Document ID: BRD-SAUCEDEMO-01
 Author: QA - Khổng Đức Anh  
 Date: 28/09/2026  
 Total Defects Discovered: 10 Bugs  
-Status: Active Backlog (Jira-Ready)  
+Status: Active Backlog  
 
 ---
 

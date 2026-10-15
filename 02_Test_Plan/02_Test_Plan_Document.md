@@ -39,7 +39,7 @@ Mục tiêu của đợt kiểm thử là đánh giá chất lượng toàn di�
 
 - Kiểm thử chức năng (Functional Testing): Đảm bảo các luồng mua sắm cốt lõi (đăng nhập, duyệt danh mục, quản lý giỏ hàng, đặt hàng thanh toán và điều hướng sidebar) hoạt động chính xác theo yêu cầu nghiệp vụ.
 - Kiểm thử phi chức năng (Non-Functional Testing): Đánh giá tính tương thích trình duyệt và giao diện di động (Compatibility / Responsive), kiểm tra thời gian tải trang và độ trễ phản hồi (Performance SLA < 2.0s), kiểm tra an toàn phiên và thuộc tính Cookie (Security), cùng các tiêu chí tiếp cận giao diện cơ bản (Accessibility / UX).
-- Phát hiện sớm và bẫy trúng các lỗi tiềm ẩn trên các tài khoản persona chuyên biệt (standard_user, problem_user, error_user, visual_user, performance_glitch_user, locked_out_user).
+- Phát hiện sớm các rủi ro và khiếm khuyết tiềm ẩn trên các luồng nghiệp vụ và trường hợp biên (Edge Cases).
 - Cung cấp số liệu định lượng (QA Metrics) và bằng chứng kiểm thử thực tế phục vụ quyết định phát hành (Go/No-Go Decision).
 
 
@@ -78,7 +78,7 @@ Các nội dung không thực hiện kiểm thử trong đợt này:
 
 Phương pháp tiếp cận kiểm thử kết hợp chặt chẽ giữa các kỹ thuật:
 
-- Kiểm thử thủ công (Manual Testing): Đóng vai trò chủ đạo trong toàn bộ quá trình kiểm thử. QA trực tiếp tương tác trên giao diện người dùng (UI), đánh giá trải nghiệm thực tế (UX), kiểm tra tính đúng đắn của logic nghiệp vụ và bẫy lỗi trên các tài khoản persona chuyên biệt.
+- Kiểm thử thủ công (Manual Testing): Đóng vai trò chủ đạo trong toàn bộ quá trình kiểm thử. QA trực tiếp tương tác trên giao diện người dùng (UI), đánh giá trải nghiệm thực tế (UX), kiểm tra tính đúng đắn của logic nghiệp vụ và phát hiện khiếm khuyết trong các luồng vận hành.
 - Kỹ thuật thiết kế kiểm thử hộp đen (Black-box Test Design Techniques):
   - Phân vùng tương đương (Equivalence Partitioning): Áp dụng cho các trường nhập liệu tên, mật khẩu, mã bưu chính.
   - Phân tích giá trị biên (Boundary Value Analysis): Áp dụng cho giỏ hàng 0 sản phẩm, 1 sản phẩm và tối đa 6 sản phẩm; kiểm tra tính toán thuế và làm tròn tiền tệ.
@@ -127,7 +127,7 @@ Lộ trình thời gian triển khai chi tiết:
 - 10/09/2026 - 12/09/2026: Phân tích nghiệp vụ ứng dụng, xây dựng Test Plan (TP_SauceDemo_v1.0).
 - 13/09/2026 - 15/09/2026: Rà soát 8 Epics, đặc tả 17 User Stories và chi tiết hóa Acceptance Criteria.
 - 16/09/2026 - 19/09/2026: Thiết kế danh sách 34 Test Scenarios (Happy Path và Negative Path).
-- 20/09/2026 - 24/09/2026: Thiết kế 71 Test Cases chi tiết theo chuẩn Zephyr và thiết lập Ma trận RTM đạt 100% độ bao phủ.
+- 20/09/2026 - 24/09/2026: Thiết kế 71 Test Cases chi tiết theo tiêu chuẩn và thiết lập Ma trận RTM đạt 100% độ bao phủ.
 - 25/09/2026 - 28/09/2026: Thực thi toàn bộ ca kiểm thử trên ứng dụng thực tế, ghi nhận kết quả vào Test Execution Results, thu thập bằng chứng hình ảnh và lập báo cáo lỗi (Bug Reports) cho các khiếm khuyết phát sinh.
 - 29/09/2026 - 30/09/2026: Tổng hợp dữ liệu QA Metrics, xây dựng Quality Dashboard, phân tích cây quyết định Go/No-Go và hoàn thiện Test Summary Report.
 
@@ -172,7 +172,7 @@ Danh mục tài liệu bàn giao dự kiến trong toàn bộ quy trình kiểm 
 Đợt kiểm thử được coi là hoàn thành khi đáp ứng đầy đủ các tiêu chí sau:
 
 - 100% ca kiểm thử theo kế hoạch (71/71 TCs) được thực thi hoặc ghi nhận trạng thái rõ ràng (Passed, Failed, Blocked).
-- Tỷ lệ đạt (Pass Rate) trên các ca thực thi đạt tối thiểu 80%.
+- Tỷ lệ đạt (Pass Rate) trên các ca thực thi đạt tối thiểu 90%.
 - Độ bao phủ yêu cầu nghiệp vụ (Requirements Coverage) đạt 100% trên Ma trận RTM (tất cả 17 User Stories đều có ca kiểm thử bao phủ).
 - 100% lỗi phát hiện trong quá trình kiểm thử được ghi nhận chi tiết vào hệ thống quản lý lỗi (Bugs Report), có đầy đủ bằng chứng hình ảnh (Evidence) và đã kiểm chứng tính tái lập 3 lần (Rule of 3).
 - Không còn bất kỳ lỗi mức độ Blocker/Critical nào chưa được xử lý hoặc chưa có phương án né lỗi tạm thời (Workaround) được phê duyệt.
