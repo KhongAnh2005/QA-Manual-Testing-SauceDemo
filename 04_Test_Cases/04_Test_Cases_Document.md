@@ -47,7 +47,7 @@ Total Test Cases: 71 Ca kiểm thử
 | [TC-25](#tc-25) | Kiểm tra xóa trực tiếp sản phẩm trên trang giỏ hàng (Cart Page) | Functional_Testing/Shopping_Cart | High | High | [US-07](../01_Requirements/01_Requirement_Document_User_Stories.md#us-07) | [TS-14](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-14) |
 | [TC-26](#tc-26) | Kiểm tra chức năng nút 'Continue Shopping' quay lại trang mua hàng | Functional_Testing/Shopping_Cart | Medium | Low | [US-07](../01_Requirements/01_Requirement_Document_User_Stories.md#us-07) | [TS-15](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-15) |
 | [TC-27](#tc-27) | Kiểm tra duy trì trạng thái giỏ hàng khi tải lại trang trình duyệt (F5 / Refresh) | Functional_Testing/Shopping_Cart | High | High | [US-08](../01_Requirements/01_Requirement_Document_User_Stories.md#us-08) | [TS-16](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-16) |
-| [TC-28](#tc-28) | Kiểm tra chức năng xóa sản phẩm Fleece Jacket khỏi giỏ hàng | Functional_Testing/Shopping_Cart | High | High | [US-06](../01_Requirements/01_Requirement_Document_User_Stories.md#us-06) | [TS-12](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-12) |
+| [TC-28](#tc-28) | Kiểm tra chức năng xóa sản phẩm Bike Light khỏi giỏ hàng | Functional_Testing/Shopping_Cart | High | High | [US-06](../01_Requirements/01_Requirement_Document_User_Stories.md#us-06) | [TS-12](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-12) |
 | [TC-29](#tc-29) | Kiểm tra chặn quy trình thanh toán khi giỏ hàng không có sản phẩm nào (Empty Cart Checkout) | Functional_Testing/Shopping_Cart | High | High | [US-08](../01_Requirements/01_Requirement_Document_User_Stories.md#us-08) | [TS-17](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-17) |
 | [TC-30](#tc-30) | Kiểm tra chuyển hướng từ giỏ hàng sang Checkout Bước 1 | Functional_Testing/Checkout | High | Critical | [US-09](../01_Requirements/01_Requirement_Document_User_Stories.md#us-09) | [TS-18](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-18) |
 | [TC-31](#tc-31) | Kiểm tra nhập thông tin khách hàng hợp lệ tại Checkout Bước 1 | Functional_Testing/Checkout | High | Critical | [US-09](../01_Requirements/01_Requirement_Document_User_Stories.md#us-09) | [TS-19](../03_Test_Scenarios/03_Test_Scenarios_Document.md#ts-19) |
@@ -1406,7 +1406,7 @@ Xem chi tiết: [TC-27.md](Functional_Testing/Shopping_Cart/TC-27.md)
 | **Field** | **Value** |
 |:---|:---|
 | **Test Case ID** | TC-28 |
-| **Name** | Kiểm tra chức năng xóa sản phẩm Fleece Jacket khỏi giỏ hàng |
+| **Name** | Kiểm tra chức năng xóa sản phẩm Bike Light khỏi giỏ hàng |
 | **Folder** | Functional_Testing/Shopping_Cart |
 | **Component** | Shopping Cart Management |
 | **Status** | Approved |
@@ -1417,17 +1417,17 @@ Xem chi tiết: [TC-27.md](Functional_Testing/Shopping_Cart/TC-27.md)
 | **TestScenarioID** | TS-12 |
 | **Test Type** | Functional / Cart Operations |
 | **Execution Environment** | Chrome Desktop (v124+) / macOS Sonoma / Screen 1920x1080 |
-| **Precondition** | Đã đăng nhập bằng 'problem_user'; đã thêm 'Sauce Labs Fleece Jacket' vào giỏ hàng. |
-| **Test Data** | Username: problem_user | Sản phẩm: Sauce Labs Fleece Jacket (\$49.99) |
+| **Precondition** | Đã đăng nhập bằng 'problem_user'; đã thêm 'Sauce Labs Bike Light' vào giỏ hàng. |
+| **Test Data** | Username: problem_user | Sản phẩm: Sauce Labs Bike Light |
 | **Postcondition** | Sản phẩm được xóa thành công khỏi giỏ hàng. |
 
 ### 1. Objective
-Xác minh nút 'Remove' hoạt động chính xác khi người dùng muốn loại bỏ áo khoác Fleece Jacket ra khỏi giỏ hàng.
+Xác minh nút 'Remove' hoạt động chính xác khi người dùng muốn loại bỏ áo khoác Bike Light ra khỏi giỏ hàng.
 
 ### 2. Test Steps
 
 1. Đăng nhập bằng 'problem_user' / 'secret_sauce'.
-2. Tìm sản phẩm 'Sauce Labs Fleece Jacket' và nhấp 'Add to cart'.
+2. Tìm sản phẩm 'Sauce Labs Bike Light' và nhấp 'Add to cart'.
 3. Xác nhận nút chuyển thành 'Remove' và huy hiệu giỏ hàng hiển thị '1'.
 4. Nhấp vào nút 'Remove' của sản phẩm 'Sauce Labs Fleece Jacket'.
 

@@ -3,7 +3,7 @@
 | **Field** | **Value** |
 |:---|:---|
 | **Bug ID** | BUG-03 |
-| **Title** | Nút 'Remove' không hoạt động, không thể xóa sản phẩm Fleece Jacket khỏi giỏ hàng đối với tài khoản problem_user |
+| **Title** | Nút 'Remove' không hoạt động, không thể xóa sản phẩm Bike Light khỏi giỏ hàng đối với tài khoản problem_user |
 | **Component** | Shopping Cart & Inventory |
 | **Severity** | High |
 | **Priority** | High |
@@ -33,9 +33,9 @@ Nút 'Remove' hoàn toàn không phản hồi khi nhấp. Sản phẩm không b�
 #### 4. Steps to Reproduce (Rule of 3 Verified)
 
 1. Đăng nhập bằng tài khoản 'problem_user'.
-2. Thêm sản phẩm 'Sauce Labs Fleece Jacket' (hoặc bất kỳ sản phẩm có ID chẵn) vào giỏ hàng.
+2. Thêm sản phẩm 'Sauce Labs Bike Light' (hoặc bất kỳ sản phẩm có ID chẵn) vào giỏ hàng.
 3. Chuyển vào trang giỏ hàng '/cart.html'.
-4. Nhấp chuột vào nút 'Remove' của sản phẩm Fleece Jacket.
+4. Nhấp chuột vào nút 'Remove' của sản phẩm Bike Light.
 
 Quy tắc kiểm chứng (Rule of 3): Đã kiểm chứng lặp lại 3 lần liên tiếp và xảy ra nhất quán 100%.
 
